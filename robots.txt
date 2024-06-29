@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lucamartinoia.github.io/al-folio/sitemap.xml
+Sitemap: https://lucamartinoia.github.io/sitemap.xml
