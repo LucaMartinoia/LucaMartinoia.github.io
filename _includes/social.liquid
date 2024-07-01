@@ -128,3 +128,7 @@
   </div>
   {% include scripts/wechatModal.liquid %}
 {% endif %}
+
+{% if site.inspire_id %}
+  <a href="https://inspirehep.net/authors/{{ site.inspire_id }}" title="InspireHEP"><i class="ai ai-inspire"></i></a>
+{% endif %}

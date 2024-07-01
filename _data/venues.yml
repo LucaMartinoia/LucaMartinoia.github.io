@@ -1,9 +1,17 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"PhD thesis":
+  color: "#16537e"
+  
+"Master thesis":
+  color: "#16537e"
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
+"JHEP":
   color: "#009f36"
+  
+"Phys.Rev.D":
+  color: "#009f36"
+  
+"arXiv":
+  color: "#cc0000"
+  
+"Phys.Rev.Research":
+  color: "#3D85C6"

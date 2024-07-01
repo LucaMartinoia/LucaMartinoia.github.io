@@ -1,25 +1,29 @@
 ---
 layout: about
-title: about
+title: About me
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://www.difi.unige.it/it'>University of Genoa</a> & <a href='https://www.ge.infn.it/wordpress/'>INFN</a>.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Physics</p>
+    <p>via Dodecaneso 33</p>
+    <p>Genoa, Italy 16146</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 ---
+<p><div style="text-align: justify">
+Hi, my name is Luca. I am a Postdoctoral researcher in Theoretical Physics at the University of Genoa, Italy. I am also researcher at INFN, under the Statistical Field Theory program. I earned my Ph.D. from the University of Genoa, and soon I will move to the University of Padua to work on the stastistical physics of complex systems.
+</div></p>
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<p><div style="text-align: justify">
+My main research interest is the theory of Hydrodynamics, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter.
+</div></p>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+>*"If you thought that science was certain - well, that is just an error on your part."*\
+Richard P. Feynman
