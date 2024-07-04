@@ -13,7 +13,11 @@
 - Le modifiche fatte ai file, via e.g. notepad++, vengono implementate immediatamente dal sistema (dopo qualche secondo, il tempo di buildare)
 - Per uscire, CTRL+C
 
-- Fatte tutte le modifiche, in qualche modo, capire come fare il push sul server.
+- Fatte tutte le modifiche, aggiornare il server (https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/)
+	- Nella directory del repository: $ git add -all per aggiungere i file modificati a una lista
+	- Successivamente $ git commit -m per trasformare la lista in un commit da mandare a github
+	- Per mandare definitivamente i file su GitHub, usare $ git push (chiede username e password)
+	- Aspettare 5/10 min che i file vengano prima caricati, poi processati dal workflow automatizzato del server di Pages.
 
 
 LINK UTILI:

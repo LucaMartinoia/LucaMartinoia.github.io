@@ -59,19 +59,19 @@
       "institution": "University of Genoa, Italy",
       "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
-      "area": "Theoretical physics",
-      "studyType": "Ph.D.",
+      "area": "",
+      "studyType": "Ph.D. in Theoretical physics",
       "startDate": "2020-10-01",
       "endDate": "2024-03-01",
-      "score": "excellent cum laude",
+      "score": "Excellent cum laude",
       "courses": ["Thesis: Developments in quasihydrodynamics.", "Supervisor: Andrea Amoretti."]
     },
 	{
       "institution": "University of Genoa, Italy",
       "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
-      "area": "Theoretical physics",
-      "studyType": "Master's degree",
+      "area": "",
+      "studyType": "Master's degree in Theoretical physics",
       "startDate": "2014-10-01",
       "endDate": "2020-09-20",
       "score": "110/110",
@@ -81,8 +81,8 @@
       "institution": "University of Genoa, Italy",
       "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
-      "area": "Physics",
-      "studyType": "Bachelor's degree",
+      "area": "",
+      "studyType": "Bachelor's degree in Physics",
       "startDate": "2011-09-01",
       "endDate": "2014-10-01",
       "score": "110/110 cum laude",
@@ -168,6 +168,13 @@
       "releaseDate": "2023-09-7",
       "url": "https://eventi.cnism.it/cmd30-fismat",
       "summary": ""
+    },
+	{
+      "name": "Relaxation terms for anomalous hydrodynamic transport in Weyl semimetals",
+      "publisher": "8th International Conference on Chirality, Vorticity, and Magnetic Field in Quantum Matter - West University of Timisoara, Romania",
+      "releaseDate": "2024-07-22",
+      "url": "https://indico.math.cnrs.fr/event/10773/",
+      "summary": ""
     }
   ],
   "volunteer": [
@@ -198,7 +205,7 @@
     {
       "name": "Hydrodynamics",
       "icon": "fa-solid fa-tag",
-	  "keywords": ["Quasi-hydrodynamics", "Chiral anomaly", "Active matter"]
+	  "keywords": ["Quasi-hydrodynamics", "Chiral anomaly", "Flocking"]
     },
 	{
       "name": "AdS/CMT",
