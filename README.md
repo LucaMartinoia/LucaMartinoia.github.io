@@ -15,9 +15,11 @@
 
 - Fatte tutte le modifiche, aggiornare il server (https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/)
 	- Nella directory del repository: $ git add -all per aggiungere i file modificati a una lista
-	- Successivamente $ git commit -m per trasformare la lista in un commit da mandare a github
+	- Successivamente $ git commit -m *msg* per trasformare la lista in un commit da mandare a github
 	- Per mandare definitivamente i file su GitHub, usare $ git push (chiede username e password)
 	- Aspettare 5/10 min che i file vengano prima caricati, poi processati dal workflow automatizzato del server di Pages.
+	
+	- Se $ git push dà problemi, potrebbe essere necessario un $ git fetch --all. Probabilmente perché ho cambiato qualche file sul server e quindi git pensa che la versione locale non sia correttamente sincronizzata.
 
 
 LINK UTILI:

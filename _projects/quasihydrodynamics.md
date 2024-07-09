@@ -5,7 +5,7 @@ description:
 img: assets/img/hydrodynamics_probe.jpg
 importance: 1
 category: work
-related_publications: false
+related_publications: true
 ---
 
 <div class="row justify-content-sm-center">
@@ -18,11 +18,11 @@ related_publications: false
     <div class="col-sm-7 mt-3 mt-md-0" style='text-align: justify;'>
 		<p>The main focus of my research is the theory of hydrodynamics. The two main applications I am interested in are condensed matter phenomenology and holography.</p>
 		
-        <p>Hydrodynamics is a low-enegy many-body effective theory of universal transport that describes systems near thermal equilibrium in the long-timescale, long-wavelength regime. The relevant degrees of freedom are the (almost-)conserved charges, usually energy, momentum and internal-symmetry charges (e.g., a \( U(1) \) electric current). Hydrodynamic applies when the scattering time between the microscopic constituent of the fluid (e.g., electrons in condensed matters) is the shortest timescale of the system (electron-impurity scatterings are rare), therefore strongly-coupled phases have an enchanced hydrodynamic regime.</p>
+        <p>Hydrodynamics is a low-enegy many-body effective theory of universal transport that describes systems near thermal equilibrium in the long-timescale, long-wavelength regime. The relevant degrees of freedom are the (almost-)conserved charges, usually energy, momentum and internal-symmetry charges (e.g., a \( U(1) \) electric current). Hydrodynamic applies when the scattering time between the microscopic constituent of the fluid (e.g., electrons in condensed matters) is the shortest timescale of the system (electron-impurity scatterings are rare), therefore strongly-coupled phases have an enchanced hydrodynamic regime {% cite Martinoia:2024cbw %}.</p>
     </div>
 </div>
 
-<p style='text-align: justify;'>One interesting application is the fluid/gravity duality, grounded in holography. It allows us to study strongly-coupled quantum systems using a theory of classical gravity, in particular a Black Hole solution in the bulk of AdS space is dual to a thermal CFT that lives on the boundary. It is then possible to study the transport properties of the quantum system using the duality, which gives a relationship between the gravitational and hydrodynamic descriptions.</p>
+<p style='text-align: justify;'>One interesting application is the fluid/gravity duality, grounded in holography. It allows us to study strongly-coupled quantum systems using a theory of classical gravity, in particular a Black Hole solution in the bulk of AdS space is dual to a thermal CFT that lives on the boundary. It is then possible to study the transport properties of the quantum system using the duality, which gives a relationship between the gravitational and hydrodynamic descriptions {% cite Amoretti:2021lll %}.</p>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
@@ -37,6 +37,6 @@ related_publications: false
 </div>
 
 
-<p style='text-align: justify;'>In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium.</p>
+<p style='text-align: justify;'>In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium {% cite Amoretti:2023hpb %}.</p>
 
-<p style='text-align: justify;'>On this regard, the research questions I am working on are: is it possible to develop a formally well-defined theory of quasihydrodynamics? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production? And how should we interpret these physically?</p>
+<p style='text-align: justify;'>On this regard, the research questions I am working on are: is it possible to develop a formally well-defined theory of quasihydrodynamics {% cite Amoretti:2022ovc %}? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production {% cite Amoretti:2023vhe %}? And how should we interpret these physically?</p>

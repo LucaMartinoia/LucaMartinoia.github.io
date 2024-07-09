@@ -3,9 +3,9 @@ layout: page
 title: Thin film superconductor
 description: 
 img: assets/img/superconductivity.jpg
-importance: 1
+importance: 2
 category: work
-related_publications: false
+related_publications: true
 ---
 
 <p style='text-align: justify;'>It is a comon lore that static external electric fields should have almost no effect on bulk metallic superconductors. This is because standard BCS superconductors contain many free charges that reorganize to screen the electric field, as it happens in normal metals.</p>
@@ -24,4 +24,4 @@ related_publications: false
 		</div>
 </div>
 
-<p style='text-align: justify;'>Part of my research deals with trying to understand this effect. Given the universality of the SFE, my advisor's group and I proposed a modified Ginzburg-Landau model that should capture the EFT of the systems below the critical temperature and managed to reproduce the main features of the SFE observed in experiments, but we still have to obtain a derivation from first principles.</p>
+<p style='text-align: justify;'>Part of my research deals with trying to understand this effect. Given the universality of the SFE, my advisor's group and I proposed a modified Ginzburg-Landau model that captures the effective theory of the system below the critical temperature, and managed to reproduce the main features of the SFE observed in experiments {% cite Amoretti:2022smp %}. We also proposed a new prediction that can be tested in the lab. Because we believe the thin film undergoes a true phase transition in the presence of an external electric field, we are now working trying to describe it from a microscopic perspective, hoping eventually to map the two descriptions together.</p>
