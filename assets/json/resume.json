@@ -150,31 +150,31 @@
   "talks": [
     {
       "name": "Thermoelectric conductivities in Charge Density Waves states from hydrodynamics",
-      "publisher": "Cortona Young 2021, GGI - Florence, Italy",
+      "publisher": "Cortona Young 2021, GGI",
       "releaseDate": "2021-06-10",
       "url": "https://www.youtube.com/watch?v=YC9yQKRZ50A",
-      "summary": "Video-poster."
+      "summary": "Florence, Italy"
     },
 	{
       "name": "A new class of hydrostatic theories",
-      "publisher": "Université Libre de Bruxelles, Belgium",
+      "publisher": "Department seminar",
       "releaseDate": "2022-11-08",
 	  "url": "https://ptm.ulb.be/",
-      "summary": "Department seminar."
+      "summary": "Université Libre de Bruxelles, Belgium"
     },
 	{
       "name": "On Frames and Magneto-Transport in Anomalous Hydrodynamics",
-      "publisher": "CMD30-FisMat23 joint conference - University of Milan, Italy",
+      "publisher": "CMD30-FisMat23 joint conference",
       "releaseDate": "2023-09-7",
       "url": "https://eventi.cnism.it/cmd30-fismat",
-      "summary": ""
+      "summary": "University of Milan, Italy"
     },
 	{
       "name": "Relaxation terms for anomalous hydrodynamic transport in Weyl semimetals",
-      "publisher": "8th International Conference on Chirality, Vorticity, and Magnetic Field in Quantum Matter - West University of Timisoara, Romania",
+      "publisher": "Chirality, Vorticity, and Magnetic Field in Quantum Matter",
       "releaseDate": "2024-07-22",
       "url": "https://indico.math.cnrs.fr/event/10773/",
-      "summary": ""
+      "summary": "West University of Timisoara, Romania"
     }
   ],
   "volunteer": [
