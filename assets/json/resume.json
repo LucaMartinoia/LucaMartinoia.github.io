@@ -91,6 +91,13 @@
   ],
   "publications": [
 	{
+      "name": "Dissipative electrically driven fluids",
+      "publisher": "arXiv [cond-mat.stat-mech]",
+      "releaseDate": "2024-07-27",
+      "url": "https://arxiv.org/abs/2407.18856",
+      "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and J. Rongen"
+    },
+	{
       "name": "Thermodynamic constraints and exact scaling exponents of flocking matter",
       "publisher": "arXiv [cond-mat.stat-mech]",
       "releaseDate": "2024-05-03",
