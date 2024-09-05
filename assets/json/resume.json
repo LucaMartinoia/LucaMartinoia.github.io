@@ -31,7 +31,8 @@
       "startDate": "2024-02-01",
       "endDate": "2024-09-01",
       "summary": "Working on the hydrodynamics of active matter.",
-      "highlights": ["Supervisor: Andrea Amoretti"]
+      "highlights": ["Supervisor: Andrea Amoretti"],
+	  "icon": "unige.png"
     },
 	{
       "name": "University of Padua, Laboratory of interdisciplinary physics (LIPh)",
@@ -41,7 +42,8 @@
       "startDate": "2024-09-01",
       "endDate": "2025-09-01",
       "summary": "Research in Dynamical Mean Field Theory for neuroscience applications.",
-      "highlights": ["Supervisor: Samir Suweis"]
+      "highlights": ["Supervisor: Samir Suweis"],
+	  "icon": "unipd.png"
     },
 	{
       "name": "Université Libre de Bruxelles",
@@ -51,7 +53,8 @@
       "startDate": "2022-10-01",
       "endDate": "2022-12-20",
       "summary": "Visiting student at ULB to work on the gauge theory of fractons.",
-      "highlights": ["Supervisor: Riccardo Argurio"]
+      "highlights": ["Supervisor: Riccardo Argurio"],
+	  "icon": "ulb.png"
     }
   ],
   "education": [
@@ -64,7 +67,8 @@
       "startDate": "2020-10-01",
       "endDate": "2024-03-01",
       "score": "Excellent cum laude",
-      "courses": ["Thesis: Developments in quasihydrodynamics.", "Supervisor: Andrea Amoretti."]
+      "courses": ["Thesis: Developments in quasihydrodynamics.", "Supervisor: Andrea Amoretti."],
+	  "icon": "unige.png"
     },
 	{
       "institution": "University of Genoa, Italy",
@@ -75,7 +79,8 @@
       "startDate": "2014-10-01",
       "endDate": "2020-09-20",
       "score": "110/110",
-      "courses": ["Thesis: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal."]
+      "courses": ["Thesis: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal."],
+	  "icon": "unige.png"
     },
 	{
       "institution": "University of Genoa, Italy",
@@ -86,10 +91,18 @@
       "startDate": "2011-09-01",
       "endDate": "2014-10-01",
       "score": "110/110 cum laude",
-      "courses": []
+      "courses": [],
+	  "icon": "unige.png"
     }
   ],
   "publications": [
+	{
+      "name": "A note on the canonical approach to hydrodynamics and linear response theory",
+      "publisher": "arXiv [hep-th]",
+      "releaseDate": "2024-08-20",
+      "url": "https://arxiv.org/abs/2408.10698",
+      "summary": "Luca Martinoia and R. Singh"
+    },
 	{
       "name": "Dissipative electrically driven fluids",
       "publisher": "arXiv [cond-mat.stat-mech]",
@@ -221,12 +234,12 @@
   ],
   "references": [
     {
-      "name": "Professor Andrea Amoretti",
+      "name": "Andrea Amoretti",
       "icon": "fa-solid fa-thumbtack",
       "reference": "University of Genoa, Ph.D. supervisor."
     },
     {
-      "name": "Dr. Daniel K. Brattan",
+      "name": "Daniel K. Brattan",
       "icon": "fa-solid fa-thumbtack",
       "reference": "University of Genoa, Collaborator."
     }

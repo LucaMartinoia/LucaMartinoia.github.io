@@ -9,9 +9,9 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Physics</p>
-    <p>via Dodecaneso 33</p>
-    <p>Genoa, Italy 16146</p>
+    <p>Department of Physics "Galileo Galilei"</p>
+    <p>via F. Marzolo, 8</p>
+    <p>Padova, Italy 35131</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -34,11 +34,11 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 
 
 <p><div style="text-align: justify">
-Hi, my name is Luca! I am a Postdoctoral researcher in Theoretical Physics at the <a href='https://www.unige.it/it'>University of Genoa</a>, <a href='https://www.difi.unige.it/it'>Department of Physics</a>. I am also associate researcher at the <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program. I earned my Ph.D. from the University of Genoa, and soon I will move to the University of Padua to work on the stastistical physics of complex systems.
+Hi, my name is Luca! I earned my Ph.D. from the University of Genova and now I am a Postdoctoral researcher in Theoretical Physics at the University of Padova, <a href='https://www.dfa.unipd.it/'>Department of Physics "Galileo Galilei"</a>, in the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a>. I am also associate researcher at the <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program.
 </div></p>
 
 <p><div style="text-align: justify">
-My main research interest is the theory of <em>Hydrodynamics</em>, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter.
+My main research interest is the theory of <em>Hydrodynamics</em>, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter. More recently, I started working on theoretical neuroscience.
 </div></p>
 
 <p><div style="text-align: justify">

@@ -25,3 +25,7 @@
 LINK UTILI:
  - Favicon: https://emojipedia.org/
  - Tabelle e immagini: https://getbootstrap.com/docs/4.4/layout/grid/
+ 
+ 
+ MODIFICHE DIFFICILI:
+ - Colore delle icone social: assets/css/main.scss

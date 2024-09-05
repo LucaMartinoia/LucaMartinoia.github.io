@@ -43,5 +43,8 @@ $max-content-width: {{ site.max_width }};
   --global-text-color: #1DA1F2;
 }
 .ai-inspire{
-  -global-text-color: #001529;
+  --global-text-color: #001529;
+}
+.ai-arxiv{
+  --global-text-color: #B31B1B;
 }
