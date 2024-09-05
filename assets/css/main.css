@@ -27,4 +27,4 @@ figure.highlight{margin:0 0 1rem}pre{color:var(--global-theme-color);background-
  * Tabler Icons 3.0.1 by tabler - https://tabler.io
  * License - https://github.com/tabler/tabler-icons/blob/master/LICENSE
  */@font-face{font-family:"tabler-icons";font-style:normal;font-weight:400;src:url("../fonts/tabler-icons-outline.woff2?v3.0.1") format("woff2"),url("../fonts/tabler-icons-outline.woff?") format("woff"),url("../fonts/tabler-icons-outline.ttf?v3.0.1") format("truetype")}.ti{font-family:"tabler-icons"!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.ti-search:before{content:"\eb1c"}.ti-sun-moon:before{content:"\f4a3"}.ai-scopus{--global-text-color:#f46c24}.ai-orcid{--global-text-color:#a6ce39}.ai-google-scholar{--global-text-color:#2962ff}
-.fa-linkedin{--global-text-color:#0a66c2}.fa-twitter-square{--global-text-color:#1da1f2}.ai-inspire{-global-text-color:#001529}
+.fa-linkedin{--global-text-color:#0a66c2}.fa-twitter-square{--global-text-color:#1da1f2}.ai-inspire{--global-text-color:#001529}.ai-arxiv{--global-text-color:#b31b1b}
