@@ -34,11 +34,11 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 
 
 <p><div style="text-align: justify">
-Hi, my name is Luca! I earned my Ph.D. from the University of Genova and now I am a Postdoctoral researcher in Theoretical Physics at the University of Padova, <a href='https://www.dfa.unipd.it/'>Department of Physics "Galileo Galilei"</a>, in the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a>. I am also associate researcher at the <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program.
+Hi, my name is Luca. I earned my Ph.D. from the University of Genova, and now I am a Postdoctoral researcher in Theoretical Physics at the University of Padova, <a href='https://www.dfa.unipd.it/'>Department of Physics "Galileo Galilei"</a>, in the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a>. I am also associate researcher at <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program.
 </div></p>
 
 <p><div style="text-align: justify">
-My main research interest is the theory of <em>Hydrodynamics</em>, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter. More recently, I started working on theoretical neuroscience.
+My research interests lie at the intersection between high-energy physics, statistical physics, and condensed matter. During my Ph.D. I worked on <em>hydrodynamics</em> as an effective field theory, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter. In September 2024 I moved to Padova, where I have started studying theoretical neuroscience and complex systems.
 </div></p>
 
 <p><div style="text-align: justify">

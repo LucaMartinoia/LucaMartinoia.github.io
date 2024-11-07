@@ -4,9 +4,9 @@
 
 - Usare ubuntu terminal e spostarsi nella cartella desiderata (comando "cd directory")
 - $ git clone https://github.com/LucaMartinoia/lucamartinoia.github.io.git [da fare solo una volta]
-- Spostarsi nella cartella appena clonata "LucaMartinoia.github.io"
+- Spostarsi nella cartella appena clonata "cd/LucaMartinoia.github.io"
 - Usare comandi Docker per creare build
-	$ sudo docker compose pull
+	$ sudo docker compose pull [password luca92]
 	$ docker compose up
 
 - Il sito, in forma locale, si trova su	http://localhost:8080

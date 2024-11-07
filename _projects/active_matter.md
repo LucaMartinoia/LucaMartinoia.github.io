@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Flocking matter
 description: 
 img: assets/img/flocking_birds.jpg
@@ -23,7 +23,7 @@ related_publications: true
 
 <p style='text-align: justify;'>In particular, I recently developed a strong interest in the flocking phase of dry active systems. This is characterized by the fact that, despite the lack of a designed leader, the various birds all start flying coherently pointing in the same direction. From a microscopic perspective, this is often modeled using the Vicsek model, which containts a list of rules that the microscopic agents follow to develop an emergent flocking behaviour.</p>
 
-<p style='text-align: justify;'>However, flocking can also be described in terms of an effective hydrodynamic theory, valid at very long time and length scales. This has been put forward for the first time by Toner and Tu in 1998, who wrote an hydrodynamic theory for a velocity field \( \vec{v}\) and a number denisty \(n\). This theory presents a mechanism to spontaneously break rotations such that coherent motion arise even in two dimensions, showing that active matter systems can avoid the Merming-Wagner-Coleman theorem thanks to their out-of-equilibrium character, and furthermore is not Galilean-invariant (because the flock moves with respect to a medium). Despite its huge success in describing the flocking phase, the Toner and Tu model contains several phenomenological terms and there are still several open questions.</p>
+<p style='text-align: justify;'>However, flocking can also be described in terms of an effective hydrodynamic theory, valid at very long time and length scales. This has been put forward for the first time by Toner and Tu in 1998, who wrote an hydrodynamic theory for a velocity field \(\vec{v}\) and a number denisty \(n\). This theory presents a mechanism to spontaneously break rotations such that coherent motion arise even in two dimensions, showing that active matter systems can avoid the Merming-Wagner-Coleman theorem thanks to their out-of-equilibrium character, and furthermore is not Galilean-invariant (because the flock moves with respect to a medium). Despite its huge success in describing the flocking phase, the Toner and Tu model contains several phenomenological terms and there are still several open questions.</p>
 
 <p style='text-align: justify;'>In {% cite Amoretti:2024obt %} we arrived at two new results: first we showed that, despite their out-of-equilibrium features, the Toner and Tu equations can be completely recovered from the hydrodynamics of a passive fluid lacking boost symmetry (sometimes called boost-agnostic hydrodynamics in the literature). Secondly, grounding our argument on this fact, we suggested new exact scaling exponents that describe the long-scale dynamics of the hydrodynamic correlators and that are in excellent agreement with all previous known experiments and simulations of the Vicsek model.</p>
 
