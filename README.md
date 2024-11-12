@@ -8,6 +8,14 @@
 - Usare comandi Docker per creare build
 	$ sudo docker compose pull [password luca92]
 	$ docker compose up
+	
+	SE DA' PROBLEMI, PROVARE (ChatGPT):
+	- Provare prima a ribuildare i volumi:
+		$ sudo docker compose down --volumes
+		$ sudo docker compose up --build
+	- Remove Gemfile.lock and Rebuild:	If Gemfile.lock is potentially causing conflicts, try deleting it on your local machine and then running:
+		$ rm Gemfile.lock
+		$ sudo docker compose up --build
 
 - Il sito, in forma locale, si trova su	http://localhost:8080
 - Le modifiche fatte ai file, via e.g. notepad++, vengono implementate immediatamente dal sistema (dopo qualche secondo, il tempo di buildare)
@@ -20,6 +28,14 @@
 	- Aspettare 5/10 min che i file vengano prima caricati, poi processati dal workflow automatizzato del server di Pages.
 	
 	- Se $ git push dà problemi, potrebbe essere necessario un $ git fetch --all. Probabilmente perché ho cambiato qualche file sul server e quindi git pensa che la versione locale non sia correttamente sincronizzata.
+	
+	Remove Gemfile.lock and Rebuild:
+
+If Gemfile.lock is potentially causing conflicts, try deleting it on your local machine and then running:
+bash
+Copia codice
+rm Gemfile.lock
+sudo docker compose up --build
 
 
 LINK UTILI:
