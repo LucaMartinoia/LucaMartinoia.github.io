@@ -30,8 +30,8 @@
       "url": "https://www.difi.unige.it/it",
       "startDate": "2024-02-01",
       "endDate": "2024-09-01",
-      "summary": "Working on the hydrodynamics of active matter.",
-      "highlights": ["Supervisor: Andrea Amoretti"],
+      "summary": "Research on the hydrodynamics of active matter.",
+      "highlights": ["Solved a 30 years old problem on the physics of flocking"],
 	  "icon": "unige.png"
     },
 	{
@@ -98,16 +98,16 @@
   "publications": [
 	{
       "name": "A note on the canonical approach to hydrodynamics and linear response theory",
-      "publisher": "arXiv [hep-th]",
-      "releaseDate": "2024-08-20",
-      "url": "https://arxiv.org/abs/2408.10698",
+      "publisher": "Acta Phys.Pol. B 56 (2025)",
+      "releaseDate": "2025-02-10",
+      "url": "https://doi.org/10.5506/APhysPolB.56.1-A4",
       "summary": "Luca Martinoia and R. Singh"
     },
 	{
       "name": "Dissipative electrically driven fluids",
-      "publisher": "arXiv [cond-mat.stat-mech]",
-      "releaseDate": "2024-07-27",
-      "url": "https://arxiv.org/abs/2407.18856",
+      "publisher": "JHEP 12 (2024) 114",
+      "releaseDate": "2024-12-17",
+      "url": "https://doi.org/10.1007/JHEP12(2024)114",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and J. Rongen"
     },
 	{
@@ -242,6 +242,11 @@
       "name": "Daniel K. Brattan",
       "icon": "fa-solid fa-thumbtack",
       "reference": "University of Genoa, Collaborator."
+    },
+	{
+      "name": "Samir Suweis",
+      "icon": "fa-solid fa-thumbtack",
+      "reference": "University of Padua, Postdoc supervisor."
     }
   ]
 }
