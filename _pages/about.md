@@ -2,16 +2,16 @@
 layout: about
 title: About me
 permalink: /
-subtitle: <b>Postdoctoral researcher in Theoretical physics</b>
+subtitle: <b>Theoretical physicist | Project Engineer at STAM</b>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Department of Physics "Galileo Galilei"</p>
-    <p>via F. Marzolo, 8</p>
-    <p>Padova, Italy 35131</p>
+    <p>STAM S.r.l.</p>
+    <p>via Lorenzo Pareto, 8A R </p>
+    <p>Genova, Italy 16129</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -34,15 +34,19 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 
 
 <p><div style="text-align: justify">
-Hi, my name is Luca. I earned my Ph.D. from the University of Genova, and now I am a Postdoctoral researcher in Theoretical Physics at the University of Padova, <a href='https://www.dfa.unipd.it/'>Department of Physics "Galileo Galilei"</a>, in the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a>. I am also associate researcher at <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program.
+Hi, my name is Luca. I am a theoretical physicist currently working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I am currently working on R&D projects in defense and airspace within the Europe Defense Fund and the SESAR programs.
 </div></p>
 
 <p><div style="text-align: justify">
-My research interests lie at the intersection between high-energy physics, statistical physics, and condensed matter. During my Ph.D. I worked on <em>hydrodynamics</em> as an effective field theory, with a focus on applications to the phenomenology of strongly-coupled condensed matter systems, to the fluid/gravity duality in Holography, and more recently to soft and active matter. In September 2024 I moved to Padova, where I have started studying theoretical neuroscience and complex systems.
+I started my researcher career at the University of Genova, where I earned my Ph.D. in physics, and then moved to the University of Padova, <a href='https://www.dfa.unipd.it/'>Department of Physics "Galileo Galilei"</a>, in the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a> to study theoretical ecology and neuroscience. I was also associate researcher at <a href='https://www.ge.infn.it/wordpress/'>INFN</a> under the Statistical Field Theory program. During these five years in research, I had the opportunity to work in small international groups, and meet several experts in the fields. I have published several papers in high IF journals and have presented my research findings to the scientific community at international conferences and workshops across Europe.
 </div></p>
 
 <p><div style="text-align: justify">
-In the photo you can see me with my wife <a href='https://unige-it1.academia.edu/ValeriaBacigalupo'>Valeria</a> moments after getting married in 2022!
+My research interests lie at the intersection between high-energy physics, statistical physics and condensed matter. During my Ph.D. I mostly worked on formal questions of statistical field theory, developing a new theory that expands the regime of applicability of hydrodynamics. The final goal was to better understand how to use fluid dynamics to model the motion of electrons inside strongly-coupled materials. At that time, I also worked on other problems related to holography, BCS superconductivity, quantum anomalies and fractons.
+</div></p>
+
+<p><div style="text-align: justify">
+More recently, my interests have expanded to other areas, such as active matter and complex systems. While I was working as a postdoctoral researcher I started studying the collective dynamics of living matter, such as flocks and bacteria colonies, solving a 30-year-old problem in the field. In Padova I worked on models of the brain, to understand how to predict its response to external stimuli from its internal stochastic dynamics.
 </div></p>
 
 

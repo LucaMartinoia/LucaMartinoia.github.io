@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Luca Martinoia",
-    "position": "Postdoctoral researcher",
+    "position": "Project Engineer",
     "image": "",
     "email": "luca.martinoia@hotmail.it",
     "phone": "+39 328 1435749",
     "url": "https://lucamartinoia.github.io",
-    "summary": "Postdoctoral researcher in theoretical physics, working at the intersection between high energy, statistical and condensed matter physics.",
+    "summary": "Project Engineer at STAM, working on R&D projects in Defense and Airspace programs.",
     "location": {
       "address": "Corso Buenos Aires 69",
       "postalCode": "16043",
@@ -23,6 +23,16 @@
     ]
   },
   "work": [
+	{
+      "name": "STAM S.r.l., Engineering Solutions",
+      "position": "Project Engineer",
+	  "location": "Genoa, Italy",
+      "url": "https://www.stamtech.com",
+      "startDate": "2025-04-07",
+      "endDate": "to date",
+      "summary": "R&D in the fields of Defense and Airspace.",
+	  "icon": "stam.jpg"
+    },
     {
       "name": "University of Genoa, Department of physics",
       "position": "Postdoctoral researcher",
@@ -40,7 +50,7 @@
 	  "location": "Padua, Italy",
       "url": "https://www.dfa.unipd.it/",
       "startDate": "2024-09-01",
-      "endDate": "2025-09-01",
+      "endDate": "2025-04-06",
       "summary": "Research in Dynamical Mean Field Theory for neuroscience applications.",
       "highlights": ["Supervisor: Samir Suweis"],
 	  "icon": "unipd.png"

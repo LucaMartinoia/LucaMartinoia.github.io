@@ -1,6 +1,6 @@
 ### HOW TO USE AL-FOLIO WEBSITE ###
 - Installare WSL2 e Ubuntu dai canali ufficiali (https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support).
-- Installare Docker (https://dev.to/0xkoji/install-docker-on-wsl2-2ma5) e Git su Ubuntu.
+- Installare Docker Windows, abilitare WSL integration, e installare Git su Ubuntu.
 
 - Usare ubuntu terminal e spostarsi nella cartella desiderata (comando "cd directory")
 - $ git clone https://github.com/LucaMartinoia/lucamartinoia.github.io.git [da fare solo una volta]
@@ -10,13 +10,7 @@
 	$ docker compose up
 	
 	SE DA' PROBLEMI, PROVARE (ChatGPT):
-	- Provare prima a ribuildare i volumi:
-		$ sudo docker compose down --volumes
-		$ sudo docker compose up --build
-	- Remove Gemfile.lock and Rebuild:	If Gemfile.lock is potentially causing conflicts, try deleting it on your local machine and then running:
-		$ rm Gemfile.lock
-		$ touch Gemfile.lock
-		$ sudo docker compose up --build
+	- $ docker compose build --no-cache e poi $ docker compose up
 
 - Il sito, in forma locale, si trova su	http://localhost:8080
 - Le modifiche fatte ai file, via e.g. notepad++, vengono implementate immediatamente dal sistema (dopo qualche secondo, il tempo di buildare)
