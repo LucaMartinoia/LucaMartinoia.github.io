@@ -7,7 +7,10 @@
         {%- if site.data.venues[entry.abbr] -%}
           {% assign venue_style = null %}
           {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = 'style="background-color:' | append: site.data.venues[entry.abbr].color | append: '; color: white; -webkit-text-fill-color: white;"' %}
+            {% assign venue_style = 'style="background-color:'
+              | append: site.data.venues[entry.abbr].color
+              | append: '; color: white; -webkit-text-fill-color: white;"'
+            %}
           {%- endif -%}
           <abbr
             class="badge rounded w-100"

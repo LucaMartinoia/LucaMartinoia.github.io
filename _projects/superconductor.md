@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Thin film superconductor
-description: 
+description:
 img: assets/img/superconductivity.jpg
 importance: 2
 category: work

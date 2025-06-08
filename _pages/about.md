@@ -17,6 +17,7 @@ news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
+
 <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
 <script type="text/javascript" charset="UTF-8">
@@ -26,12 +27,12 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 </script>
 
 <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+
 <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
 
 <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
 
 <!--<a href="#" id="open_preferences_center">Update cookies preferences</a>-->
-
 
 <p><div style="text-align: justify">
 Hi, my name is Luca. I am a theoretical physicist currently working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I am currently working on R&D projects in defense and airspace within the Europe Defense Fund and the SESAR programs.
@@ -49,6 +50,5 @@ My research interests lie at the intersection between high-energy physics, stati
 More recently, my interests have expanded to other areas, such as active matter and complex systems. While I was working as a postdoctoral researcher I started studying the collective dynamics of living matter, such as flocks and bacteria colonies, solving a 30-year-old problem in the field. In Padova I worked on models of the brain, to understand how to predict its response to external stimuli from its internal stochastic dynamics.
 </div></p>
 
-
->*"If you thought that science was certain - well, that is just an error on your part."*\
-Richard P. Feynman
+> _"If you thought that science was certain - well, that is just an error on your part."_\
+> Richard P. Feynman

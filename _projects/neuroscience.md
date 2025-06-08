@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Response in whole-brain models
-description: 
+description:
 img: assets/img/brain_project.jpg
 importance: 2
 category: work

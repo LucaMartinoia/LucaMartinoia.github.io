@@ -28,22 +28,22 @@
                     </p>
                   </td>
                 </tr>
-			  {% endif %}
-			  {% if content.icon %}
-				<tr>
-				  <td>
-				    {% assign entry_path = content.icon | prepend: '/assets/img/logos/' %}
-					{%
-						include figure.liquid
-						loading="eager"
-						path=entry_path
-						width = "50px"
-						class="preview"
-						zoomable=false
-						alt=entry.preview
-					%}
-				  </td>
-				</tr>
+              {% endif %}
+              {% if content.icon %}
+                <tr>
+                  <td>
+                    {% assign entry_path = content.icon | prepend: '/assets/img/logos/' %}
+                    {%
+                      include figure.liquid
+                      loading="eager"
+                      path=entry_path
+                      width = "50px"
+                      class="preview"
+                      zoomable=false
+                      alt=entry.preview
+                    %}
+                  </td>
+                </tr>
               {% endif %}
             </tbody>
           </table>

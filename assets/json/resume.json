@@ -14,7 +14,7 @@
       "countryCode": "Italy",
       "region": "Genova"
     },
-	    "profiles": [
+    "profiles": [
       {
         "network": "Twitter",
         "username": "luca_martinoia",
@@ -23,48 +23,48 @@
     ]
   },
   "work": [
-	{
+    {
       "name": "STAM S.r.l., Engineering Solutions",
       "position": "Project Engineer",
-	  "location": "Genoa, Italy",
+      "location": "Genoa, Italy",
       "url": "https://www.stamtech.com",
       "startDate": "2025-04-07",
       "endDate": "to date",
       "summary": "R&D in the fields of Defense and Airspace.",
-	  "icon": "stam.jpg"
+      "icon": "stam.jpg"
     },
     {
       "name": "University of Genoa, Department of physics",
       "position": "Postdoctoral researcher",
-	  "location": "Genoa, Italy",
+      "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
       "startDate": "2024-02-01",
       "endDate": "2024-09-01",
       "summary": "Research on the hydrodynamics of active matter.",
       "highlights": ["Solved a 30 years old problem on the physics of flocking"],
-	  "icon": "unige.png"
+      "icon": "unige.png"
     },
-	{
+    {
       "name": "University of Padua, Laboratory of interdisciplinary physics (LIPh)",
       "position": "Postdoctoral researcher",
-	  "location": "Padua, Italy",
+      "location": "Padua, Italy",
       "url": "https://www.dfa.unipd.it/",
       "startDate": "2024-09-01",
       "endDate": "2025-04-06",
       "summary": "Research in Dynamical Mean Field Theory for neuroscience applications.",
       "highlights": ["Supervisor: Samir Suweis"],
-	  "icon": "unipd.png"
+      "icon": "unipd.png"
     },
-	{
+    {
       "name": "Université Libre de Bruxelles",
       "position": "Visiting PhD student",
-	  "location": "Bruxelles, Belgium",
+      "location": "Bruxelles, Belgium",
       "url": "https://ptm.ulb.be/",
       "startDate": "2022-10-01",
       "endDate": "2022-12-20",
       "summary": "Visiting student at ULB to work on the gauge theory of fractons.",
       "highlights": ["Supervisor: Riccardo Argurio"],
-	  "icon": "ulb.png"
+      "icon": "ulb.png"
     }
   ],
   "education": [
@@ -78,9 +78,9 @@
       "endDate": "2024-03-01",
       "score": "Excellent cum laude",
       "courses": ["Thesis: Developments in quasihydrodynamics.", "Supervisor: Andrea Amoretti."],
-	  "icon": "unige.png"
+      "icon": "unige.png"
     },
-	{
+    {
       "institution": "University of Genoa, Italy",
       "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
@@ -90,9 +90,9 @@
       "endDate": "2020-09-20",
       "score": "110/110",
       "courses": ["Thesis: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal."],
-	  "icon": "unige.png"
+      "icon": "unige.png"
     },
-	{
+    {
       "institution": "University of Genoa, Italy",
       "location": "Genoa, Italy",
       "url": "https://www.difi.unige.it/it",
@@ -102,67 +102,67 @@
       "endDate": "2014-10-01",
       "score": "110/110 cum laude",
       "courses": [],
-	  "icon": "unige.png"
+      "icon": "unige.png"
     }
   ],
   "publications": [
-	{
+    {
       "name": "A note on the canonical approach to hydrodynamics and linear response theory",
       "publisher": "Acta Phys.Pol. B 56 (2025)",
       "releaseDate": "2025-02-10",
       "url": "https://doi.org/10.5506/APhysPolB.56.1-A4",
       "summary": "Luca Martinoia and R. Singh"
     },
-	{
+    {
       "name": "Dissipative electrically driven fluids",
       "publisher": "JHEP 12 (2024) 114",
       "releaseDate": "2024-12-17",
       "url": "https://doi.org/10.1007/JHEP12(2024)114",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and J. Rongen"
     },
-	{
+    {
       "name": "Thermodynamic constraints and exact scaling exponents of flocking matter",
       "publisher": "Phys. Rev. E 110 (2024) 5, 054108",
       "releaseDate": "2024-11-12",
       "url": "https://doi.org/10.1103/PhysRevE.110.054108",
       "summary": "A. Amoretti, D.K. Brattan and Luca Martinoia"
     },
-	{
+    {
       "name": "Developments in quasihydrodynamics",
       "publisher": "arXiv [hep-th]",
       "releaseDate": "2024-03-01",
       "url": "https://arxiv.org/abs/2403.14254",
       "summary": "Luca Martinoia"
     },
-	{
+    {
       "name": "Relaxation terms for anomalous hydrodynamic transport in Weyl semimetals from kinetic theory",
       "publisher": "JHEP 02 (2024) 071",
       "releaseDate": "2024-02-13",
       "url": "https://doi.org/10.1007/JHEP02(2024)071",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia, I. Matthaiakakis and J. Rongen"
     },
-	{
+    {
       "name": "Restoring time-reversal covariance in relaxed hydrodynamics",
       "publisher": "Phys.Rev.D 108 (2023) 5, 5",
       "releaseDate": "2023-09-01",
       "url": "https://doi.org/10.1103/PhysRevD.108.056003",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and I. Matthaiakakis"
     },
-	{
+    {
       "name": "Leading order magnetic field dependence of conductivities in anomalous hydrodynamics",
       "publisher": "Phys.Rev.D 108 (2023) 1, 1",
       "releaseDate": "2023-07-10",
       "url": "https://doi.org/10.1103/PhysRevD.108.016003",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and I. Matthaiakakis"
     },
-	{
+    {
       "name": "Non-dissipative electrically driven fluids",
       "publisher": "JHEP 05 (2023) 218",
       "releaseDate": "2023-05-26",
       "url": "https://doi.org/10.1007/JHEP05(2023)218",
       "summary": "A. Amoretti, D.K. Brattan, Luca Martinoia and I. Matthaiakakis"
     },
-	{
+    {
       "name": "Destroying superconductivity in thin films with an electric field",
       "publisher": "Phys.Rev.Res. 4 (2022) 3, 033211",
       "releaseDate": "2022-09-19",
@@ -185,21 +185,21 @@
       "url": "https://www.youtube.com/watch?v=YC9yQKRZ50A",
       "summary": "Florence, Italy"
     },
-	{
+    {
       "name": "A new class of hydrostatic theories",
       "publisher": "Department seminar",
       "releaseDate": "2022-11-08",
-	  "url": "https://ptm.ulb.be/",
+      "url": "https://ptm.ulb.be/",
       "summary": "Université Libre de Bruxelles, Belgium"
     },
-	{
+    {
       "name": "On Frames and Magneto-Transport in Anomalous Hydrodynamics",
       "publisher": "CMD30-FisMat23 joint conference",
       "releaseDate": "2023-09-7",
       "url": "https://eventi.cnism.it/cmd30-fismat",
       "summary": "University of Milan, Italy"
     },
-	{
+    {
       "name": "Relaxation terms for anomalous hydrodynamic transport in Weyl semimetals",
       "publisher": "Chirality, Vorticity, and Magnetic Field in Quantum Matter",
       "releaseDate": "2024-07-22",
@@ -235,9 +235,9 @@
     {
       "name": "Hydrodynamics",
       "icon": "fa-solid fa-tag",
-	  "keywords": ["Quasi-hydrodynamics", "Chiral anomaly", "Flocking"]
+      "keywords": ["Quasi-hydrodynamics", "Chiral anomaly", "Flocking"]
     },
-	{
+    {
       "name": "AdS/CMT",
       "icon": "fa-solid fa-tag"
     }
@@ -253,7 +253,7 @@
       "icon": "fa-solid fa-thumbtack",
       "reference": "University of Genoa, Collaborator."
     },
-	{
+    {
       "name": "Samir Suweis",
       "icon": "fa-solid fa-thumbtack",
       "reference": "University of Padua, Postdoc supervisor."

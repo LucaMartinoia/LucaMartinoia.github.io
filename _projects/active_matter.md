@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flocking matter
-description: 
+description:
 img: assets/img/flocking_birds.jpg
 importance: 2
 category: work

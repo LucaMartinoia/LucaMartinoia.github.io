@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quasi-hydrodynamics
-description: 
+description:
 img: assets/img/hydrodynamics_probe.jpg
 importance: 1
 category: work
@@ -35,7 +35,6 @@ related_publications: true
 			Examples of hydrodynamic electron flow. <b>Left:</b> simulation of vortices. <b>Right:</b> ballistic and hydrodynamic regimes.
 		</div>
 </div>
-
 
 <p style='text-align: justify;'>In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium {% cite Amoretti:2023hpb %}.</p>
 
