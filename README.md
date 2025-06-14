@@ -20,6 +20,7 @@
 
 - Fatte tutte le modifiche, aggiornare il server (https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/)
 
+  - Usare prettier per formattare bene: $ npx prettier . --write
   - Nella directory del repository: $ git add --all per aggiungere i file modificati a una lista
   - Successivamente $ git commit -m _msg_ per trasformare la lista in un commit da mandare a github
   - Per mandare definitivamente i file su GitHub, usare $ git push (chiede username e password)

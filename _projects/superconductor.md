@@ -4,7 +4,7 @@ title: Thin film superconductor
 description:
 img: assets/img/superconductivity.jpg
 importance: 2
-category: work
+category: physics
 related_publications: true
 ---
 

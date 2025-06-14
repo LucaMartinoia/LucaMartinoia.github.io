@@ -6,7 +6,7 @@ permalink: /projects/
 description: My research projects/interests.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [engineering, physics]
 horizontal: false
 ---
 

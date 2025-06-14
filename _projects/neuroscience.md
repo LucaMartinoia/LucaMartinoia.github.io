@@ -4,7 +4,7 @@ title: Response in whole-brain models
 description:
 img: assets/img/brain_project.jpg
 importance: 2
-category: work
+category: physics
 related_publications: true
 ---
 

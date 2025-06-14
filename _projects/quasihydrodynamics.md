@@ -4,7 +4,7 @@ title: Quasi-hydrodynamics
 description:
 img: assets/img/hydrodynamics_probe.jpg
 importance: 1
-category: work
+category: physics
 related_publications: true
 ---
 

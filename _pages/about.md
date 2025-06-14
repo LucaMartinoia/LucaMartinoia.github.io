@@ -35,7 +35,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
 <!--<a href="#" id="open_preferences_center">Update cookies preferences</a>-->
 
 <p><div style="text-align: justify">
-Hi, my name is Luca. I am a theoretical physicist currently working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I am currently working on R&D projects in defense and airspace within the Europe Defense Fund and the SESAR programs.
+Hi, my name is Luca. I am a theoretical physicist working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I am currently leading R&D projects in defense and airspace within the Europe Defense Fund and the SESAR programs.
 </div></p>
 
 <p><div style="text-align: justify">

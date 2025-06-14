@@ -4,7 +4,7 @@ title: Flocking matter
 description:
 img: assets/img/flocking_birds.jpg
 importance: 2
-category: work
+category: physics
 related_publications: true
 ---
 
