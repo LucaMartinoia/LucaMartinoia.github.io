@@ -18,22 +18,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-<script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false});
-});
-</script>
-
-<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
-
-<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-
-<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
-
-<!--<a href="#" id="open_preferences_center">Update cookies preferences</a>-->
-
 <p><div style="text-align: justify">
 Hi, my name is Luca. I am a theoretical physicist working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I am currently leading R&D projects in defense and airspace within the Europe Defense Fund and the SESAR programs.
 </div></p>
@@ -52,3 +36,19 @@ More recently, my interests have expanded to other areas, such as active matter 
 
 > _"If you thought that science was certain - well, that is just an error on your part."_\
 > Richard P. Feynman
+
+<!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+<script defer type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script defer type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false});
+});
+</script>
+
+<noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/">TermsFeed</a></noscript>
+
+<!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+<!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+<!--<a href="#" id="open_preferences_center">Update cookies preferences</a>-->
