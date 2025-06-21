@@ -2,7 +2,7 @@
 layout: page
 title: Thin film superconductor
 description:
-img: assets/img/superconductivity.jpg
+img: assets/img/projects/superconductor/superconductivity.jpg
 importance: 2
 category: physics
 related_publications: true
@@ -14,10 +14,10 @@ related_publications: true
 
 <div class="row justify-content-sm-center align-items-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/experimental_setup.jpg" title="experimental setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/superconductor/experimental_setup.jpg" title="experimental setup" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-7 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/critical_current.jpg" title="critical_current" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/superconductor/critical_current.jpg" title="critical_current" class="img-fluid rounded z-depth-1" %}
     </div>
 	<div class="caption">
 			<b>Left:</b> experimental setup. <b>Right:</b> suppression of the critical current.

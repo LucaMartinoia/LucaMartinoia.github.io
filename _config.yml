@@ -2,13 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Luca Martinoia # the website title (if blank, full name will be used instead)
 first_name: Luca
 middle_name:
 last_name: Martinoia
 email: luca.martinoia@hotmail.it
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Luca Martinoia's personal website. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -75,6 +75,7 @@ scopus_id: 57226336422 # your profile on Scopus
 x_username: luca_martinoia # your X handle
 inspire_id: 1874454 # inspireHEP ID
 arxiv_id: martinoia_l_1.html # arXiv ID
+github_username: LucaMartinoia
 
 #contact_note: >
 #  You can even add a little note about which of these is the best way to reach you.
@@ -250,7 +251,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
   uglifier_args:
     harmony: true
 

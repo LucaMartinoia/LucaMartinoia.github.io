@@ -2,7 +2,7 @@
 layout: post
 title: Flocking matter
 description:
-img: assets/img/flocking_birds.jpg
+img: assets/img/projects/flocking_matter/flocking_birds.jpg
 importance: 2
 category: physics
 related_publications: true
@@ -12,11 +12,11 @@ related_publications: true
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/active_matter_scales.png" title="active matter" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/flocking_matter/active_matter_scales.png" title="Active matter scales" class="img-fluid rounded z-depth-1" %}
     </div>
 	<div class="caption">
-			Examples of active matter systems at various scales.
-		</div>
+		Examples of active matter systems at various scales.
+	</div>
 </div>
 
 <p style='text-align: justify;'>Active matter systems are very interesting to study because of their unusual features. Indeed, activity means that these systems are intrinsecally out-of-equilibrium, and therefore present characteristics which are very different to that of their passive counterparts. To name a few, active matter can develop unusual orders such as flocking, swarming, nematic, etc... while also presenting unusual density fluctuations.</p>

@@ -1,37 +1,45 @@
 ### HOW TO USE AL-FOLIO WEBSITE
 
-- Installare WSL2 e Ubuntu dai canali ufficiali (https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support).
-- Installare Docker Windows, abilitare WSL integration, e installare Git su Ubuntu.
+# Installation
 
-- Usare ubuntu terminal e spostarsi nella cartella desiderata (comando "cd directory")
-- $ git clone https://github.com/LucaMartinoia/lucamartinoia.github.io.git [da fare solo una volta]
-- Spostarsi nella cartella appena clonata "cd/LucaMartinoia.github.io"
-- Usare comandi Docker per creare build
-  $ sudo docker compose pull [password luca92]
+- Install WSL2 and Ubuntu (https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support).
+- Install Docker Windows and enable WSL integration.
+- Install Git on Ubuntu and sync the GitHub account.
+- Install prettier and ImageMagick
+- Open Ubuntu and go in the desired directory ($ cd dir)
+- $ git clone https://github.com/LucaMartinoia/lucamartinoia.github.io.git
+
+# Local usage
+
+- Move in the cloned folder $ cd/LucaMartinoia.github.io
+- Use Docker
+  $ sudo docker compose pull
   $ docker compose up
+- If problem arise:
+  $ docker compose build --no-cache, followed by $ docker compose up
+- The local version of the website if found at http://localhost:8080
+- To quit Docker, CTRL+C
 
-  SE DA' PROBLEMI, PROVARE (ChatGPT):
+# Sync with GitHub server
 
-  - $ docker compose build --no-cache e poi $ docker compose up
+- Done with the changes, update the server (https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/)
 
-- Il sito, in forma locale, si trova su http://localhost:8080
-- Le modifiche fatte ai file, via e.g. notepad++, vengono implementate immediatamente dal sistema (dopo qualche secondo, il tempo di buildare)
-- Per uscire, CTRL+C
+  - First, use prettier in the directory: $ npx prettier . --write
+  - $ git add --all to add all changes to the commit.
+  - $ git commit -m _msg_ to commit the changes.
+  - $ git push to send the commit to the GitHub repository.
+  - Wait 5/10 min for the files to be loaded and processed by Pages' Actions.
+  - If $ git push raises issues, it might be necessary to $ git fetch --all first, to sync the server with the local version.
 
-- Fatte tutte le modifiche, aggiornare il server (https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/)
-
-  - Usare prettier per formattare bene: $ npx prettier . --write
-  - Nella directory del repository: $ git add --all per aggiungere i file modificati a una lista
-  - Successivamente $ git commit -m _msg_ per trasformare la lista in un commit da mandare a github
-  - Per mandare definitivamente i file su GitHub, usare $ git push (chiede username e password)
-  - Aspettare 5/10 min che i file vengano prima caricati, poi processati dal workflow automatizzato del server di Pages.
-  - Se $ git push dà problemi, potrebbe essere necessario un $ git fetch --all. Probabilmente perché ho cambiato qualche file sul server e quindi git pensa che la versione locale non sia correttamente sincronizzata.
-
-LINK UTILI:
+# Useful links
 
 - Favicon: https://emojipedia.org/
 - Tabelle e immagini: https://getbootstrap.com/docs/4.4/layout/grid/
 
-MODIFICHE DIFFICILI:
+# Strange changes:
 
-- Colore delle icone social: assets/css/main.scss
+- Social icons color: assets/css/main.scss
+
+## TO DO
+
+- Add courses to json CV (bottom of \_config and in layout): add SFT GGI, TFML, comp neuroscience

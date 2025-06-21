@@ -2,7 +2,7 @@
 layout: page
 title: Quasi-hydrodynamics
 description:
-img: assets/img/hydrodynamics_probe.jpg
+img: assets/img/projects/quasihydrodynamics/hydrodynamics_probe.jpg
 importance: 1
 category: physics
 related_publications: true
@@ -10,7 +10,7 @@ related_publications: true
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/hydrodynamic_glorioso.png" title="hydrodynamic scale" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_glorioso.png" title="hydrodynamic scale" class="img-fluid rounded z-depth-1" %}
 		<div class="caption">
 			Conserved charges cannot be destroyed locally, hence they relax slowly.
 		</div>
@@ -26,10 +26,10 @@ related_publications: true
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/hydrodynamic_flow.jpg" title="hydrodynamic flow" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/quasihydrodynamics/hydrodynamic_flow.jpg" title="hydrodynamic flow" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/electron_hydrodynamics.jpg" title="electron hydrodynamics" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/quasihydrodynamics/electron_hydrodynamics.jpg" title="electron hydrodynamics" class="img-fluid rounded z-depth-1" %}
     </div>
 	<div class="caption">
 			Examples of hydrodynamic electron flow. <b>Left:</b> simulation of vortices. <b>Right:</b> ballistic and hydrodynamic regimes.
