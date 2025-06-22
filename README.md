@@ -5,7 +5,7 @@
 - Install WSL2 and Ubuntu (https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support).
 - Install Docker Windows and enable WSL integration.
 - Install Git on Ubuntu and sync the GitHub account.
-- Install prettier and ImageMagick
+- Install prettier
 - Open Ubuntu and go in the desired directory ($ cd dir)
 - $ git clone https://github.com/LucaMartinoia/lucamartinoia.github.io.git
 
@@ -43,3 +43,4 @@
 ## TO DO
 
 - Add courses to json CV (bottom of \_config and in layout): add SFT GGI, TFML, comp neuroscience
+- Fix MathJax issue

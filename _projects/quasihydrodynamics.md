@@ -6,6 +6,7 @@ img: assets/img/projects/quasihydrodynamics/hydrodynamics_probe.jpg
 importance: 1
 category: physics
 related_publications: true
+enable_math: true
 ---
 
 <div class="row justify-content-sm-center">

@@ -8,11 +8,11 @@ category: physics
 related_publications: true
 ---
 
-<p style='text-align: justify;' style="margin-bottom:1cm;">The term <em>active matter</em> refers to many-body systems in which the microscopic constituents are in some sense active or alive. This usually means that they have some mean of self-propultion and interact with each other in complicated non-reciprocal ways. Some examples of active matter are flocks of birds, herds of animals, schools of fish, swarms of instects, but also bacteria colonies, cell tissues, and even interacting robots.</p>
+<p style='text-align: justify;'>The term <em>active matter</em> refers to many-body systems in which the microscopic constituents are in some sense active or alive. This usually means that they have some mean of self-propultion and interact with each other in complicated non-reciprocal ways. Some examples of active matter are flocks of birds, herds of animals, schools of fish, swarms of instects, but also bacteria colonies, cell tissues, and even interacting robots.</p>
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/flocking_matter/active_matter_scales.png" title="Active matter scales" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/flocking_matter/active_matter_scales.png" title="Active matter scales" class="img-fluid rounded z-depth-1 mt-3" %}
     </div>
 	<div class="caption">
 		Examples of active matter systems at various scales.
