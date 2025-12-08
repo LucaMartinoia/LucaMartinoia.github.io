@@ -19,19 +19,19 @@ social: false # includes social icons at the bottom of the page
 ---
 
 <p><div style="text-align: justify">
-Hi, my name is Luca. I am a theoretical physicist working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I lead R&D projects in defense and airspace under the Europe Defense Fund and the SESAR programs.
+Hi, my name is Luca. I am a theoretical physicist working as project engineer at <a href='http://stamtech.com/'>STAM</a>. I lead R&D projects in defense and air traffic management under the Europe Defense Fund and the SESAR programs.
 </div></p>
 
 <p><div style="text-align: justify">
-I began my research career at the University of Genova, where I earned my Ph.D. in theoretical physics. Later, I moved to the <a href='https://www.unipd.it/'>University of Padova</a>, Department of Physics "Galileo Galilei", joining the <a href='https://www.liphlab.com/'>Collaborative Laboratory of Interdisciplinary Physics (LIPh Lab)</a> to study theoretical ecology and neuroscience. I was also an associate researcher at <a href='https://www.ge.infn.it/wordpress/'>INFN</a> within the Statistical Field Theory program. During these five years in research, I had the opportunity to work in small international groups and meet several experts in the field. I have published several papers in high IF journals and have presented my research findings to the scientific community at international conferences and workshops across Europe.
+I began my research career at the University of Genova, earning a Ph.D. in theoretical physics. I then joined the <a href='https://www.unipd.it/'>University of Padova</a>, Department of Physics "Galileo Galilei", and the <a href='https://www.liphlab.com/'>LIPh Lab</a> to study theoretical ecology and neuroscience. Since the start of my Ph.D., I was also an associate researcher at <a href='https://www.ge.infn.it/wordpress/'>INFN</a> in the Statistical Field Theory program. Over five years, I worked in small international teams, published in high-impact journals, and presented my work at conferences across Europe.
 </div></p>
 
 <p><div style="text-align: justify">
-My research interests lie at the intersection between high-energy physics, statistical physics and condensed matter. During my Ph.D. I mostly worked on formal questions of statistical field theory, developing a new theoretical framework to expand the regime of applicability of hydrodynamics. The ultimate goal was to better understand how to use fluid dynamics to model the motion of electrons inside strongly-coupled materials. At that time, I also worked on other problems related to holography, BCS superconductivity, quantum anomalies and fractons.
+My research spans high-energy physics, statistical physics, and condensed matter. During my Ph.D., I focused on formal aspects of statistical field theory, developing a framework to extend hydrodynamics and better model electron motion in strongly-coupled materials, while also exploring holography, BCS superconductivity, quantum anomalies, and fractons. More recently, my interests broadened to active matter and complex systems, studying collective dynamics in living matter—solving a 30-year-old problem—and modeling brain activity to predict neural responses from internal stochastic dynamics.
 </div></p>
 
 <p><div style="text-align: justify">
-More recently, my interests have expanded to other areas, such as active matter and complex systems. While I was working as a postdoctoral researcher I started studying the collective dynamics of living matter, such as flocks and bacterial colonies, successfully solving a 30-year-old problem in the field. In Padova I worked on models of the brain, aiming to predict neural responses to external stimuli based on internal stochastic dynamics.
+I am currently involved in European-funded projects, including EDF and SESAR JU, focusing on Defence and Air Traffic Management. In particular, my work in ATM has sparked a growing interest in aviation research, with a focus on cyber-security, ADS-B systems, and communication, navigation, and surveillance (CNS) technologies.
 </div></p>
 
 > _"If you thought that science was certain - well, that is just an error on your part."_\

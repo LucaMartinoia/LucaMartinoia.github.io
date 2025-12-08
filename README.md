@@ -42,5 +42,4 @@
 
 ## TO DO
 
-- Add courses to json CV (bottom of \_config and in layout): add SFT GGI, TFML, comp neuroscience
-- Fix MathJax issue
+

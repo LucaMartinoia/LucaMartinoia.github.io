@@ -24,6 +24,13 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
+
+.badge abbr,
+.badge a,
+.badge div {
+  color: white !important;
+}
+
 .ai-scopus{
   --global-text-color: #f46c24;
 }

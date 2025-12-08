@@ -15,6 +15,14 @@ module Jekyll
       splitted = params.split(" ").map(&:strip)
       @scholar_id = splitted[0]
       @article_id = splitted[1]
+
+      if @scholar_id.nil? || @scholar_id.empty?
+        puts "Invalid scholar_id provided"
+      end
+
+      if @article_id.nil? || @article_id.empty?
+        puts "Invalid article_id provided"
+      end
     end
 
     def render(context)
@@ -29,7 +37,7 @@ module Jekyll
           end
 
           # Sleep for a random amount of time to avoid being blocked
-          sleep(rand(3.0..7.0))
+          sleep(rand(1.5..3.5))
 
           # Fetch the article page
           doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
@@ -65,9 +73,8 @@ module Jekyll
         citation_count = "N/A"
 
         # Print the error message including the exception class and message
-        puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
+        puts "Error fetching citation count for #{article_id} in #{article_url}: #{e.class} - #{e.message}"
       end
-
 
       GoogleScholarCitationsTag::Citations[article_id] = citation_count
       return "#{citation_count}"
