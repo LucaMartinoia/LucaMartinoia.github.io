@@ -13,3 +13,4 @@ vendor
 .idea
 .venv
 *.Zone.Identifier
+*:*Zone.Identifier
