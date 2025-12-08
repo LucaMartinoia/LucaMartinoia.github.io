@@ -41,5 +41,3 @@
 - Social icons color: assets/css/main.scss
 
 ## TO DO
-
-
