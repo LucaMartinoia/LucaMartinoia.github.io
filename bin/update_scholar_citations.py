@@ -6,6 +6,7 @@ import yaml
 from datetime import datetime
 from scholarly import scholarly
 
+print("SCRIPT STARTED")
 
 def load_scholar_user_id() -> str:
     """Load the Google Scholar user ID from the configuration file."""
