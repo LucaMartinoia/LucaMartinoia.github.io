@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2025-12-12'
+  last_updated: '2025-12-29'
 papers:
   JWoVsOMAAAAJ:2osOgNQ5qMEC:
-    citations: 13
+    citations: 14
     title: Non-dissipative electrically driven fluids
     year: '2023'
   JWoVsOMAAAAJ:9yKSN-GCB0IC:
@@ -10,15 +10,15 @@ papers:
     title: Destroying superconductivity in thin films with an electric field
     year: '2022'
   JWoVsOMAAAAJ:Se3iqnhoufwC:
-    citations: 7
+    citations: 8
     title: Thermodynamic constraints and exact scaling exponents of flocking matter
     year: '2024'
   JWoVsOMAAAAJ:Tyk-4Ss8FVUC:
-    citations: 10
+    citations: 11
     title: Leading order magnetic field dependence of conductivities in anomalous hydrodynamics
     year: '2023'
   JWoVsOMAAAAJ:UebtZRa9Y70C:
-    citations: 0
+    citations: 1
     title: The Hamiltonian mechanics of exotic particles
     year: '2025'
   JWoVsOMAAAAJ:WF5omc3nYNoC:
@@ -26,7 +26,7 @@ papers:
     title: Developments in quasihydrodynamics
     year: '2024'
   JWoVsOMAAAAJ:Y0pCki6q_DkC:
-    citations: 8
+    citations: 9
     title: Relaxation terms for anomalous hydrodynamic transport in Weyl semimetals from kinetic theory
     year: '2024'
   JWoVsOMAAAAJ:YsMSGLbcyi4C:
@@ -34,18 +34,18 @@ papers:
     title: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal
     year: '2020'
   JWoVsOMAAAAJ:_FxGoFyzp5QC:
-    citations: 5
+    citations: 6
     title: Dissipative electrically driven fluids
     year: '2024'
   JWoVsOMAAAAJ:d1gkVwhDpl0C:
-    citations: 34
+    citations: 35
     title: Hydrodynamic magneto-transport in holographic charge density wave states
     year: '2021'
   JWoVsOMAAAAJ:roLk4NBRz8UC:
-    citations: 0
+    citations: 1
     title: A note on the canonical approach to hydrodynamics and linear response theory
     year: '2024'
   JWoVsOMAAAAJ:zYLM7Y9cAGgC:
-    citations: 12
+    citations: 13
     title: Restoring time-reversal covariance in relaxed hydrodynamics
     year: '2023'
