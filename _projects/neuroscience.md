@@ -2,7 +2,7 @@
 layout: post
 title: Response in whole-brain models
 description:
-img: assets/img/projects/neuroscience/brain_project.jpg
+img: assets/img/projects/neuroscience/cover.jpg
 importance: 2
 category: physics
 related_publications: true
@@ -23,27 +23,23 @@ The fluctuation-dissipation theorem (FDT) is a fundamental principle originally 
 	</p>
   </div>
   <div class="col-sm-5 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/projects/neuroscience/linear_response_theory.png" title="Linear response theory" class="img-fluid rounded z-depth-1 mt-5" %}
+    {% include figure.liquid path="assets/img/projects/neuroscience/linear_response_theory.jpg" title="Linear response theory" class="img-fluid rounded z-depth-1 mt-5" %}
     <div class="caption">
       Response functions can be obtained by perturbing the system with an impulse stimulus.
     </div>
   </div>
 </div>
 
-<p style="text-align: justify;">
-In practical terms, this generalized FDT framework enables researchers to infer the response properties of a system purely from observational data, without requiring detailed knowledge of the microscopic model. For whole-brain dynamics, this means that one can analyze the spontaneous activity correlations across different brain regions to predict how these regions will respond to small external stimuli. Such predictions are invaluable for identifying brain areas that are more sensitive or susceptible to perturbations, and for characterizing the functional form of these responses.
-</p>
-
 <div class="row justify-content-sm-center">
   <div class="col-sm-5 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/projects/neuroscience/wilson-cowan_unit.png" title="Wilson–Cowan unit" class="img-fluid rounded z-depth-1 mt-4" %}
+    {% include figure.liquid path="assets/img/projects/neuroscience/wilson-cowan_unit.jpg" title="Wilson–Cowan unit" class="img-fluid rounded z-depth-1 mt-4" %}
     <div class="caption">
       A Wilson–Cowan unit models the excitatory-inhibitory dynamics of a mesoscopic population.
     </div>
   </div>
   <div class="col-sm-7 mt-3 mt-md-0" style="text-align: justify;">
     <p>
-      Our focus is on the linear response of a network consisting of multiple large mesoscopic populations, each representing a brain region, coupled through long-range symmetric connections. Rather than assuming random interactions, the coupling matrix is derived from empirical structural connectivity data, with the network size set to approximately 200 nodes, reflecting realistic brain complexity. By applying the linear-noise approximation, which holds in the large-volume limit, we can analytically study the system’s response functions to external perturbations. The presence of intrinsic stochastic fluctuations in the system permits the use of a non-equilibrium version of the fluctuation-dissipation theorem, providing a powerful link between measurable correlations and response functions.
+      My focus is on the linear response of a network consisting of multiple large mesoscopic populations, each representing a brain region, coupled through long-range symmetric connections. Rather than assuming random interactions, the coupling matrix is derived from empirical structural connectivity data, with the network size set to approximately 200 nodes, reflecting realistic brain complexity. By applying the linear-noise approximation, which holds in the large-volume limit, we can analytically study the system’s response functions to external perturbations. The presence of intrinsic stochastic fluctuations in the system permits the use of a non-equilibrium version of the fluctuation-dissipation theorem, providing a powerful link between measurable correlations and response functions.
     </p>
   </div>
 </div>

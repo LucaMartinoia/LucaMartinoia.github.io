@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /seminars/
-title: Seminars and talks
+title: Seminars
 description: Seminars, talks and poster presentations.
 nav: true
-nav_order: 10
+nav_order: 4
 ---
 
 <!-- _pages/publications.md -->

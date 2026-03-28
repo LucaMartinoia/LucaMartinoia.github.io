@@ -2,7 +2,7 @@
 layout: page
 title: Quasi-hydrodynamics
 description:
-img: assets/img/projects/quasihydrodynamics/hydrodynamics_probe.jpg
+img: assets/img/projects/quasihydrodynamics/cover.jpg
 importance: 1
 category: physics
 related_publications: true
@@ -11,7 +11,7 @@ enable_math: true
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_glorioso.png" title="hydrodynamic scale" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_glorioso.jpg" title="hydrodynamic scale" class="img-fluid rounded z-depth-1" %}
 		<div class="caption">
 			Conserved charges cannot be destroyed locally, hence they relax slowly.
 		</div>
@@ -39,4 +39,4 @@ enable_math: true
 
 <p style='text-align: justify;'>In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium {% cite Amoretti:2023hpb %}.</p>
 
-<p style='text-align: justify;'>On this regard, the research questions I am working on are: is it possible to develop a formally well-defined theory of quasihydrodynamics {% cite Amoretti:2022ovc Amoretti:2024jig %}? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production {% cite Amoretti:2023vhe %}? And how should we interpret these physically?</p>
+<p style='text-align: justify;'>On this regard, the research questions I have worked on are: is it possible to develop a formally well-defined theory of quasihydrodynamics {% cite Amoretti:2022ovc Amoretti:2024jig %}? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production {% cite Amoretti:2023vhe %}? And how should we interpret these physically?</p>

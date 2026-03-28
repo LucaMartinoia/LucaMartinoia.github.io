@@ -18,7 +18,7 @@
 
 - Install dependencies with
 
-      npm install
+      $ npm install
 
 - Use Docker
 
@@ -41,15 +41,15 @@ Done with the changes, update the server
 
       $ npx prettier . --write
 
--     	$ git add --all
+-     $ git add --all
 
   to add all changes to the commit.
 
--     	$ git commit -m "msg"
+-     $ git commit -m "msg"
 
   to commit the changes.
 
--     	$ git push
+-     $ git push
 
   to send the commit to the GitHub repository.
 
@@ -68,9 +68,7 @@ Done with the changes, update the server
 ## Main changes:
 
 - Social icons colors: `assets/css/main.scss`
-- Icons in ersume: `_includes/resume/work.liquid` (and education)
+- Icons in resume: `_includes/resume/work.liquid` (and education)
 - Multi-tag publications: `_pages/publications`
-
-## TO DO
-
-- EISNET
+- Simulations: add `simulation` in the `_config.yaml` collections. Then create `_layouts/simulation.liquid` from `post.liquid`. Finally, create a `_simulations` folder and add there all the simulations markdown files.
+- PWA: create `/pwa/pwa_name` in root and past there whatever is produced by Vite in `/dist` after build. It should work just fine.

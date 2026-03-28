@@ -2,7 +2,7 @@
 layout: page
 title: Thin film superconductor
 description:
-img: assets/img/projects/superconductor/superconductivity.jpg
+img: assets/img/projects/superconductor/cover.jpg
 importance: 2
 category: physics
 related_publications: true
@@ -24,4 +24,4 @@ related_publications: true
 		</div>
 </div>
 
-<p style='text-align: justify;'>Part of my research deals with trying to understand this effect. Given the universality of the SFE, my advisor's group and I proposed a modified Ginzburg-Landau model that captures the effective theory of the system below the critical temperature, and managed to reproduce the main features of the SFE observed in experiments {% cite Amoretti:2022smp %}. We also proposed a new prediction that can be tested in the lab. Because we believe the thin film undergoes a true phase transition in the presence of an external electric field, we are now working trying to describe it from a microscopic perspective, hoping eventually to map the two descriptions together.</p>
+<p style='text-align: justify;'>Part of my research dealt with trying to understand this effect. Given the universality of the SFE, during my Ph.D. we proposed a modified Ginzburg-Landau model that captures the effective theory of the system below the critical temperature, and managed to reproduce the main features of the SFE observed in experiments {% cite Amoretti:2022smp %}. We also proposed a new prediction that can be tested in the lab. Because we believe the thin film undergoes a true phase transition in the presence of an external electric field, we attempted to describe it from a microscopic perspective, hoping eventually to map the two descriptions.</p>

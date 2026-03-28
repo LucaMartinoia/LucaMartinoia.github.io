@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Luca Martinoia",
-    "position": "Project Engineer",
+    "position": "Algorithm developer",
     "image": "",
     "email": "luca.martinoia@hotmail.it",
     "phone": "+39 328 1435749",
     "url": "https://lucamartinoia.github.io/",
-    "summary": "Project Engineer at STAM, working on R&D projects in Defense and ATM programs.",
+    "summary": "Ph.D. in theoretical physics | Algorithm developer at Rulex.",
     "location": {
       "address": "Corso Buenos Aires 69",
       "postalCode": "16043",
@@ -18,6 +18,16 @@
   },
   "work": [
     {
+      "name": "Rulex S.r.l.",
+      "position": "Algorithm developer",
+      "location": "Genoa, Italy",
+      "url": "https://www.rulex.ai/",
+      "startDate": "2026-03-23",
+      "endDate": "to date",
+      "summary": "Research and development of optimization algorithms for decision intelligence applications",
+      "icon": "rulex.png"
+    },
+    {
       "name": "STAM S.r.l., Engineering Solutions",
       "position": "R&D Project Engineer",
       "location": "Genoa, Italy",
@@ -25,7 +35,10 @@
       "startDate": "2025-04-07",
       "endDate": "to date",
       "summary": "R&D in the fields of Defense and ATM.",
-      "highlights": ["Developing an ATM/ATC simulator for the ATM-EXCITE project (SESAR JU).", "System Engineer for the EDF project EISNET."],
+      "highlights": [
+        "Technical lead, developed an ATM/ATC simulator for the ATM-EXCITE project (SESAR JU).",
+        "System Engineer for the EDF project EISNET."
+      ],
       "icon": "stam.jpg"
     },
     {

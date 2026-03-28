@@ -2,7 +2,7 @@
 layout: post
 title: Flocking matter
 description:
-img: assets/img/projects/flocking_matter/flocking_birds.jpg
+img: assets/img/projects/flocking_matter/cover.jpg
 importance: 2
 category: physics
 related_publications: true
@@ -12,7 +12,7 @@ related_publications: true
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/flocking_matter/active_matter_scales.png" title="Active matter scales" class="img-fluid rounded z-depth-1 mt-3" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/flocking_matter/active_matter_scales.jpg" title="Active matter scales" class="img-fluid rounded z-depth-1 mt-3" %}
     </div>
 	<div class="caption">
 		Examples of active matter systems at various scales.
@@ -27,4 +27,4 @@ related_publications: true
 
 <p style='text-align: justify;'>In {% cite Amoretti:2024obt %} we arrived at two new results: first we showed that, despite their out-of-equilibrium features, the Toner and Tu equations can be completely recovered from the hydrodynamics of a passive fluid lacking boost symmetry (sometimes called boost-agnostic hydrodynamics in the literature). Secondly, grounding our argument on this fact, we suggested new exact scaling exponents that describe the long-scale dynamics of the hydrodynamic correlators and that are in excellent agreement with all previous known experiments and simulations of the Vicsek model.</p>
 
-<p style='text-align: justify;'>Because our argument appears to be very robust, we are now trying to apply our ideas to different scenarios (Malthusian and incompressible flocks, quanched vs annehaled disorder, etc...). Furthermore, we are also thinking about ways to prove more formally the argument that allowed us to fix exactly the scaling exponents.</p>
+<p style='text-align: justify;'>Because our argument appears to be very robust, we plan to apply our ideas to different scenarios (Malthusian and incompressible flocks, quanched vs annehaled disorder, etc...). Furthermore, we are also thinking about ways to prove more formally the argument that allowed us to fix exactly the scaling exponents.</p>
