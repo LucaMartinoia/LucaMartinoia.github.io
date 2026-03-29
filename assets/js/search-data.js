@@ -3,8 +3,8 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about-me",
-    title: "About me",
+    id: "nav-about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
@@ -18,10 +18,24 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "My research projects/interests.",
+          description: "The research project I worked on.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
+          },
+        },{id: "nav-seminars",
+          title: "Seminars",
+          description: "Seminars, talks and poster presentations.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/seminars/";
+          },
+        },{id: "nav-simulations",
+          title: "Simulations",
+          description: "Some personal projects.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/simulations/";
           },
         },{id: "nav-cv",
           title: "CV",
@@ -30,18 +44,16 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-seminars-and-talks",
-          title: "Seminars and talks",
-          description: "Seminars, talks and poster presentations.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/seminars/";
-          },
         },{id: "projects-atm-excite",
           title: 'ATM-EXCITE',
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/atm_excite/";
+            },},{id: "projects-eisnet",
+          title: 'EISNET',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/eisnet/";
             },},{id: "projects-flocking-matter",
           title: 'Flocking matter',
           description: "",
@@ -62,6 +74,21 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/superconductor/";
+            },},{id: "simulations-simcom",
+          title: 'SIMCOM',
+          description: "",
+          section: "Simulations",handler: () => {
+              window.location.href = "/simulations/SIMCOM/";
+            },},{id: "simulations-drone-swarm-dynamics",
+          title: 'Drone swarm dynamics',
+          description: "",
+          section: "Simulations",handler: () => {
+              window.location.href = "/simulations/swarm_dynamics/";
+            },},{id: "simulations-tennis-match-visualizer",
+          title: 'Tennis match visualizer',
+          description: "",
+          section: "Simulations",handler: () => {
+              window.location.href = "/simulations/tennis_point_vis/";
             },},{
         id: 'social-arxiv',
         title: 'arXiv',
