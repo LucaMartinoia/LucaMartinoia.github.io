@@ -1,26 +1,26 @@
 "PhD thesis":
-  color: "#2596be"
+  color: "#007DB3"
 
 "Master thesis":
-  color: "#2596be"
+  color: "#007DB3"
 
 "arXiv":
-  color: "#cc0000"
+  color: "#E02D2D"
 
 "JHEP":
-  color: "#918001"
+  color: "#8C731A"
 
 "Phys.Rev.D":
-  color: "#467e91"
+  color: "#1D818E"
 
 "Phys.Rev.E":
-  color: "#946037"
+  color: "#AD6320"
 
 "Phys.Rev.Research":
-  color: "#13294b"
+  color: "#3E75C8"
 
 "Acta Phys.Polon.B":
-  color: "#6d400e"
+  color: "#AD6320"
 
 "J. Stat. Mech.":
-  color: "#ccddf6"
+  color: "#1573E2"

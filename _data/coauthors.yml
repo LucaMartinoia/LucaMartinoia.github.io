@@ -1,11 +1,19 @@
 "amoretti":
-  - firstname: ["A.", "Andrea"]
+  - firstname: ["Andrea", "A."]
     url: https://www.ge.infn.it/~amoretti/
 
 "brattan":
-  - firstname: ["D.K.", "Daniel", "Daniel Keith", "Daniel K."]
+  - firstname: ["Daniel", "Daniel Keith", "Daniel K.", "D.K."]
     url: https://sites.google.com/site/dannybrattan/home
 
 "matthaiakakis":
   - firstname: ["Ioannis", "I."]
     url: https://scholar.google.com/citations?user=yGCzmIMAAAAJ&hl=el
+
+"rongen":
+  - firstname: ["Jonas", "J."]
+    url: https://scholar.google.com/citations?user=VxmP18MAAAAJ&hl=el
+
+"singh":
+  - firstname: ["Rajeev", "R."]
+    url: https://scholar.google.com/citations?user=LfmzvkkAAAAJ&hl=it

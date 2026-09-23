@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Luca Martinoia",
-    "position": "Algorithm developer",
+    "label": "Algorithm developer",
     "image": "",
     "email": "luca.martinoia@hotmail.it",
     "phone": "+39 328 1435749",
     "url": "https://lucamartinoia.github.io/",
-    "summary": "Ph.D. in theoretical physics | Algorithm developer at Rulex.",
+    "summary": "I hold a Ph.D. in theoretical physics. After leaving academia, I developed an interest in algorithms and simulations. I currently work as an algorithm developer at Rulex.",
     "location": {
       "address": "Corso Buenos Aires 69",
       "postalCode": "16043",
@@ -23,7 +23,7 @@
       "location": "Genoa, Italy",
       "url": "https://www.rulex.ai/",
       "startDate": "2026-03-23",
-      "endDate": "to date",
+      "endDate": "",
       "summary": "Research and development of optimization algorithms for decision intelligence applications",
       "icon": "rulex.png"
     },
@@ -33,11 +33,11 @@
       "location": "Genoa, Italy",
       "url": "https://www.stamtech.com",
       "startDate": "2025-04-07",
-      "endDate": "to date",
-      "summary": "R&D in the fields of Defense and ATM.",
+      "endDate": "2026-03-21",
+      "summary": "Led R&D projects in the fields of Defense and Air Traffic Management",
       "highlights": [
-        "Technical lead, developed an ATM/ATC simulator for the ATM-EXCITE project (SESAR JU).",
-        "System Engineer for the EDF project EISNET."
+        "Technical lead, developed an ATM/ATC simulator for the ATM-EXCITE project (SESAR JU)",
+        "System Engineer for the EDF project EISNET"
       ],
       "icon": "stam.jpg"
     },
@@ -48,8 +48,8 @@
       "url": "https://www.difi.unige.it/it",
       "startDate": "2024-02-01",
       "endDate": "2024-09-01",
-      "summary": "Research on the hydrodynamics of active matter.",
-      "highlights": ["Solved a 30 years old problem on the physics of flocking"],
+      "summary": "Research on the hydrodynamics of active matter",
+      "highlights": ["Tackled a 30-years-old problem on the physics of flocking matter"],
       "icon": "unige.png"
     },
     {
@@ -59,18 +59,18 @@
       "url": "https://www.dfa.unipd.it/",
       "startDate": "2024-09-01",
       "endDate": "2025-04-06",
-      "summary": "Research in Dynamical Mean Field Theory for neuroscience applications.",
+      "summary": "Research in Dynamical Mean Field Theory for neuroscience applications",
       "highlights": ["Supervisor: Samir Suweis"],
       "icon": "unipd.png"
     },
     {
       "name": "Université Libre de Bruxelles",
-      "position": "Visiting PhD student",
+      "position": "Visiting researcher",
       "location": "Bruxelles, Belgium",
       "url": "https://ptm.ulb.be/",
       "startDate": "2022-10-01",
       "endDate": "2022-12-20",
-      "summary": "Visiting student at ULB to work on the gauge theory of fractons.",
+      "summary": "Visiting student at ULB to work on the gauge theory of fractons",
       "highlights": ["Supervisor: Riccardo Argurio"],
       "icon": "ulb.png"
     }
@@ -85,7 +85,7 @@
       "startDate": "2020-10-01",
       "endDate": "2024-03-01",
       "score": "Excellent cum laude",
-      "courses": ["Thesis: Developments in quasihydrodynamics.", "Supervisor: Andrea Amoretti."],
+      "courses": ["Thesis: Developments in quasihydrodynamics", "Supervisor: Andrea Amoretti"],
       "icon": "unige.png"
     },
     {
@@ -97,7 +97,7 @@
       "startDate": "2014-10-01",
       "endDate": "2020-09-20",
       "score": "110/110",
-      "courses": ["Thesis: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal."],
+      "courses": ["Thesis: Anomalous hydrodynamic description of thermoelectric transport in a Weyl semimetal"],
       "icon": "unige.png"
     },
     {
@@ -161,18 +161,6 @@
       "issuer": "freeCodeCamp",
       "url": "https://freecodecamp.org/certification/lucamartinoia/scientific-computing-with-python-v7",
       "icon": "fa-solid fa-graduation-cap"
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Portofranco",
-      "location": "Genoa, Italy",
-      "position": "Science tutor",
-      "url": "",
-      "startDate": "2010-04-01",
-      "endDate": "2024-07-01",
-      "summary": "Tutoring high-school students in math and physics.",
-      "highlights": []
     }
   ],
   "languages": [

@@ -1,12 +1,11 @@
 ---
-published: true
 layout: page
 title: Simulations
 permalink: /simulations/
 description: Some personal projects.
 nav: true
 nav_order: 5
-display_categories: [simulation, visualization]
+display_categories: [simulation] # visualization
 horizontal: false
 ---
 

@@ -2,12 +2,12 @@
 published: false
 layout: page
 title: submenus
-nav: true
-nav_order: 20
+nav: false
+nav_order: 10
 dropdown: true
 children:
-  - title: publications
-    permalink: /publications/
+  - title: CV
+    permalink: /cv/
   - title: divider
   - title: projects
     permalink: /projects/

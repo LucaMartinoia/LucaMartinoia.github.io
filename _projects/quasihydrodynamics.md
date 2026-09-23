@@ -9,34 +9,52 @@ related_publications: true
 enable_math: true
 ---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-5 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_glorioso.jpg" title="hydrodynamic scale" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-sm-center align-items-center">
+    <div class="col-md-4 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_glorioso.jpg"
+          title="hydrodynamic scale"
+          class="img-fluid rounded z-depth-1"
+        %}
 		<div class="caption">
 			Conserved charges cannot be destroyed locally, hence they relax slowly.
 		</div>
     </div>
-    <div class="col-sm-7 mt-3 mt-md-0" style='text-align: justify;'>
-		<p>The main focus of my research is the theory of hydrodynamics. The two main applications I am interested in are condensed matter phenomenology and holography.</p>
-		
-        <p>Hydrodynamics is a low-enegy many-body effective theory of universal transport that describes systems near thermal equilibrium in the long-timescale, long-wavelength regime. The relevant degrees of freedom are the (almost-)conserved charges, usually energy, momentum and internal-symmetry charges (e.g., a \( U(1) \) electric current). Hydrodynamic applies when the scattering time between the microscopic constituent of the fluid (e.g., electrons in condensed matters) is the shortest timescale of the system (electron-impurity scatterings are rare), therefore strongly-coupled phases have an enchanced hydrodynamic regime {% cite Martinoia:2024cbw %}.</p>
+    <div class="col-md-8 mt-3 mt-md-0" style="text-align: justify">
+		<p>
+            The main focus of my doctoral research is the theory of hydrodynamics. The two main applications I am interested in are condensed matter phenomenology and holography.
+        </p>
+        <p>
+            Hydrodynamics is a low-enegy many-body effective theory of universal transport that describes systems near thermal equilibrium in the long-timescale, long-wavelength regime. The relevant degrees of freedom are the (almost-)conserved charges, usually energy, momentum and internal-symmetry charges (e.g., a \( U(1) \) electric current). Hydrodynamics applies when the scattering time between the microscopic constituent of the fluid (e.g., electrons in condensed matters) is the shortest timescale of the system (electron-impurity scatterings are rare), therefore strongly-coupled phases have an enchanced hydrodynamic regime {% cite Martinoia:2024cbw %}.
+        </p>
     </div>
 </div>
 
-<p style='text-align: justify;'>One interesting application is the fluid/gravity duality, grounded in holography. It allows us to study strongly-coupled quantum systems using a theory of classical gravity, in particular a Black Hole solution in the bulk of AdS space is dual to a thermal CFT that lives on the boundary. It is then possible to study the transport properties of the quantum system using the duality, which gives a relationship between the gravitational and hydrodynamic descriptions {% cite Amoretti:2021lll %}.</p>
+<p style="text-align: justify">
+    One interesting application is the fluid/gravity duality, grounded in holography. Thanks to holography we can study strongly-coupled quantum systems using a theory of classical gravity, in particular a Black Hole solution in the bulk of AdS space is dual to a thermal CFT that lives on the boundary. It is then possible to study the transport properties of the quantum system using the duality, which gives a relationship between the gravitational and hydrodynamic descriptions {% cite Amoretti:2021lll %}.
+</p>
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/quasihydrodynamics/hydrodynamic_flow.jpg" title="hydrodynamic flow" class="img-fluid rounded z-depth-1" %}
+    <div class="col-md-4 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/hydrodynamic_flow.jpg"
+          title="hydrodynamic flow"
+          class="img-fluid rounded z-depth-1"
+        %}
     </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/projects/quasihydrodynamics/electron_hydrodynamics.jpg" title="electron hydrodynamics" class="img-fluid rounded z-depth-1" %}
+    <div class="col-md-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/quasihydrodynamics/electron_hydrodynamics.jpg"
+          title="electron hydrodynamics"
+          class="img-fluid rounded z-depth-1"
+        %}
     </div>
 	<div class="caption">
-			Examples of hydrodynamic electron flow. <b>Left:</b> simulation of vortices. <b>Right:</b> ballistic and hydrodynamic regimes.
-		</div>
+        Examples of hydrodynamic electron flow. <b>Left:</b> simulation of vortices. <b>Right:</b> ballistic and hydrodynamic regimes.
+    </div>
 </div>
 
-<p style='text-align: justify;'>In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium {% cite Amoretti:2023hpb %}.</p>
+<p style="text-align: justify">
+    In hydrodynamics charges are exactly conserved. However, in real materials this is rarely true, since electrons can lose momentum and energy to impurities and phonons. Therefore the theory of hydrodynamics must be expanded to what is known as quasihydrodynamics, a theory in which charges are not exactly conserved, but are allowed to slowly relax to equilibrium {% cite Amoretti:2023hpb %}.
+</p>
 
-<p style='text-align: justify;'>On this regard, the research questions I have worked on are: is it possible to develop a formally well-defined theory of quasihydrodynamics {% cite Amoretti:2022ovc Amoretti:2024jig %}? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production {% cite Amoretti:2023vhe %}? And how should we interpret these physically?</p>
+<p style="text-align: justify">
+    On this regard, the research questions I have worked on during my Ph.D. are: is it possible to develop a formally well-defined theory of quasihydrodynamics {% cite Amoretti:2022ovc Amoretti:2024jig %}? How are the equations modified with respect to standard fluid dynamics? Are there constraints coming from symmetries and entropy production {% cite Amoretti:2023vhe %}? And how should we interpret these physically?
+</p>

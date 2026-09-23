@@ -1,9 +1,8 @@
 ---
-published: true
 layout: page
 title: Projects
 permalink: /projects/
-description: The research project I worked on.
+description: The research project I have worked on.
 nav: true
 nav_order: 3
 display_categories: [engineering, physics]

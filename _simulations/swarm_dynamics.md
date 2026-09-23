@@ -1,19 +1,13 @@
 ---
-layout: simulation
+layout: page
 title: Drone swarm dynamics
 description:
 category: simulation
 img: assets/img/simulations/drone_swarm/cover.jpeg
 ---
 
-<div
-  id="canvas-container"
-  class="simulation-canvas"
->
-  <div
-    id="three-container"
-    class="simulation-canvas"
-  ></div>
+<div id="canvas-container" class="simulation-canvas">
+  <div id="three-container" class="simulation-canvas"></div>
 
   <!-- Full-size transparent button -->
 
@@ -83,7 +77,6 @@ img: assets/img/simulations/drone_swarm/cover.jpeg
     "
   >
     <h3 style="margin-top: 0; text-align: center">Parameters</h3>
-
     <!-- Top row: drones + toggle -->
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div style="display: flex; align-items: center; gap: 4px;">
@@ -92,26 +85,22 @@ img: assets/img/simulations/drone_swarm/cover.jpeg
         <button id="btn-minus" class="symbol-btn"><i class="fa-solid fa-minus"></i></button>
         <button id="btn-plus" class="symbol-btn"><i class="fa-slab fa-regular fa-plus"></i></button>
       </div>
-
       <div style="display: flex; align-items: center; gap: 4px;">
         <input type="checkbox" id="swarm-toggle" checked />
         <label for="swarm-toggle" style="margin:0;">Swarm logic</label>
       </div>
     </div>
-
     <!-- Sliders -->
     <div>
       <label for="slider-twr">Ranging period (s):</label>
       <span id="twr-value">0.5</span>
       <input id="slider-twr" type="range" min="0.01" max="1" step="0.01" value="0.5" class="full-width slider" />
     </div>
-
     <div>
       <label for="slider-vmax">Drone noise (m/s):</label>
       <span id="vmax-value">4.0</span>
       <input id="slider-vmax" type="range" min="0" max="10" step="0.1" value="4" class="full-width slider" />
     </div>
-
     <div>
       <label for="bearing-error-slider">Bearing error (°):</label>
       <span id="bearing-error-value">0</span>
@@ -121,10 +110,7 @@ img: assets/img/simulations/drone_swarm/cover.jpeg
   </div>
 
   <!-- Right: Explanation -->
-  <div
-    id="explanation"
-    style="flex: 1; padding: 2px; text-align: justify; margin-top: 0px"
-  >
+  <div id="explanation" style="flex: 1; padding: 2px; text-align: justify; margin-top: 0px">
     <h3>Explanation</h3>
     <p>
       This simulation models a small aerial drone swarm in a GNSS-denied
@@ -180,7 +166,7 @@ input[type="range"] {
 }
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"></script>
-<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"></script>
-<script src="{{ "/assets/js/simulations/swarm/swarm.js" | relative_url }}"></script>
+<script type="module" src="{{ "/assets/simulations/swarm/swarm.js" | relative_url }}"></script>
+<script>
+  console.log("AFTER SWARM SCRIPT TAG");
+</script>
