@@ -1,4 +1,6 @@
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glass { #{$fa-icon-property}: unquote("\"#{ $fa-var-martini-glass-empty }\""); }
+@use "sass:string";
+
+.#{$fa-css-prefix}.#{$fa-css-prefix}-glass { #{$fa-icon-property}: string.unquote("\"#{ $fa-var-martini-glass-empty }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;

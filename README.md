@@ -72,3 +72,15 @@ Done with the changes, update the server
 - Multi-tag publications: `_pages/publications`
 - Simulations: add `simulation` in the `_config.yaml` collections. Then create `_layouts/simulation.liquid` from `post.liquid`. Finally, create a `_simulations` folder and add there all the simulations markdown files.
 - PWA: create `/pwa/pwa_name` in root and past there whatever is produced by Vite in `/dist` after build. It should work just fine.
+
+## TODO:
+2. Check and update missing _config.yml entries
+3. GDPR notice fix
+4. Drone swarm is broken
+5. Check the correct way to apply social icon color and how to add icons to the CV
+6. Describe full website and pipeline
+7. Move tennis viz to simulation (do not split in simulations and visualizations)
+8. Try various themes
+9. Add the new simulation to the website
+10. Understand where python scripts (scholar update) are moved to
+11. Al folio does not have a _layout/_includes/_plugins/_sass folder anymore. Why do I?
