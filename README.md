@@ -326,9 +326,12 @@ The most common workflow is therefore:
 
 **Docker container → `bundle` / `jekyll` / integration tests**
 
+# Local changes
+
+This is a list of local changes performed compared to the pure al-folio version:
+- Added `_includes/head.liquid` to overwrite the same file from the al-folio-core plugin. This was necessary in order to include `blob` in the Content Security Policy that was blocking Three.js.
 
 ## TODO:
 
-2. Drone swarm is broken, try local installation?
 3. Check the correct way to apply social icon color and how to add icons to the CV
 4. Add the new simulation to the website
