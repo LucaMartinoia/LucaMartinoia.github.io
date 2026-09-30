@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: simulation
 title: Drone swarm dynamics
-description:
-category: simulation
-img: assets/img/simulations/drone_swarm/cover.jpeg
+description: TODO ALLTODO ALLTODO ALLTODO ALLTODO ALLTODO ALLTODO ALL
+category: simulations
+img: assets/simulations/swarm/cover.jpg
+script: swarm/app.js
 ---
 
 <div id="canvas-container" class="simulation-canvas">
@@ -12,43 +13,6 @@ img: assets/img/simulations/drone_swarm/cover.jpeg
   <!-- Full-size transparent button -->
 
 <button id="playpause-button"><i class="fa-solid fa-play"></i></button>
-
-  <style>
-    .simulation-canvas {
-      width: 100%;
-      height: 60vh;
-      margin: auto;
-      position: relative; /* for the button overlay */
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    #playpause-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border: none;
-      font-size: 24px;
-      transition: background 0.2s ease;
-    }
-
-    #playpause-button i {
-      transition: transform 0.2s ease;
-    }
-
-    #playpause-button.paused i {
-      transform: scale(1.1);
-    }
-  </style>
 </div>
 
 <!-- GUI -->
@@ -129,44 +93,3 @@ img: assets/img/simulations/drone_swarm/cover.jpeg
     </p>
   </div>
 </div>
-
-<style>
-/* Minimal symbol-only buttons with subtle rounded outline */
-.symbol-btn {
-  background: transparent;
-  border: 1px solid var(--global-theme-color);
-  border-radius: 4px;
-  padding: 0 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.symbol-btn:hover {
-  background: transparent;
-  border-color: var(--global-theme-color);
-}
-
-/* Sliders full width and tighter label spacing */
-.full-width {
-  width: 100%;
-}
-
-.slider {
-  margin-top: 2px; /* reduce vertical spacing between label and slider */
-}
-
-label, span {
-  display: inline-block; /* keeps them on the same line */
-  margin-bottom: 0;      /* remove extra bottom margin */
-}
-
-input[type="range"] {
-  margin-top: 2px;       /* reduce gap above input */
-}
-</style>
-
-<script type="module" src="{{ "/assets/simulations/swarm/swarm.js" | relative_url }}"></script>
-<script>
-  console.log("AFTER SWARM SCRIPT TAG");
-</script>

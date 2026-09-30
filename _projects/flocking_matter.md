@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Flocking matter
 description:
 img: assets/img/projects/flocking_matter/cover.jpg

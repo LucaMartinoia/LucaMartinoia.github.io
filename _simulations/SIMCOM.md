@@ -2,8 +2,8 @@
 layout: page
 title: SIMCOM
 description:
-category: simulation
-img: assets/img/simulations/simcom/cover.jpeg
+category: simulations
+img: assets/simulations/simcom/cover.jpeg
 ---
 
 <p style="text-align: justify">

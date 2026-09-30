@@ -24,7 +24,8 @@
       "url": "https://www.rulex.ai/",
       "startDate": "2026-03-23",
       "endDate": "",
-      "summary": "Research and development of optimization algorithms for decision intelligence applications",
+      "summary": "Development of computational methods for decision intelligence applications",
+      "highlights": ["Development of a modelling language for operation research in C/C++", "Modelling of MILP and CP optimization problems"],
       "icon": "rulex.png"
     },
     {
@@ -35,10 +36,7 @@
       "startDate": "2025-04-07",
       "endDate": "2026-03-21",
       "summary": "Led R&D projects in the fields of Defense and Air Traffic Management",
-      "highlights": [
-        "Technical lead, developed an ATM/ATC simulator for the ATM-EXCITE project (SESAR JU)",
-        "System Engineer for the EDF project EISNET"
-      ],
+      "highlights": ["Led the development of an ATC simulator for the ATM-EXCITE project", "System Engineer for the EDF project EISNET"],
       "icon": "stam.jpg"
     },
     {
@@ -149,13 +147,6 @@
       "icon": "fa-solid fa-graduation-cap"
     },
     {
-      "name": "Data Analysis with Python",
-      "date": "2025-09",
-      "issuer": "freeCodeCamp",
-      "url": "https://www.freecodecamp.org/certification/lucamartinoia/data-analysis-with-python-v7",
-      "icon": "fa-solid fa-graduation-cap"
-    },
-    {
       "name": "Scientific computing with Python",
       "date": "2025-11",
       "issuer": "freeCodeCamp",
@@ -167,12 +158,12 @@
     {
       "language": "Italian",
       "fluency": "Native speaker",
-      "icon": ""
+      "icon": "fa solid fa-language"
     },
     {
       "language": "English",
       "fluency": "Fluent",
-      "icon": ""
+      "icon": "fa solid fa-language"
     }
   ],
   "interests": [

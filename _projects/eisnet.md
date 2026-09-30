@@ -11,7 +11,7 @@ related_publications: false
 <div class="row justify-content-sm-center align-items-center">
   <div class="col-md-6 mt-3 mt-md-0" style="text-align: justify">
     <p style="text-align: justify">
-      <a href="https://defence-industry-space.ec.europa.eu/document/download/c2d3522a-25fc-45c4-b158-5050df34bfbe_en?filename=EDF-2023-DA-SENS-GRID_EISNET.pdf" target="_blank" rel="noopener noreferrer">EISNET</a> (European Interactive Sensor-based dynamic defence NETwork) is a European Defence Fund R&D project led by Thales, to which I contributed while working at STAM.
+      <a href="https://defence-industry-space.ec.europa.eu/document/download/c2d3522a-25fc-45c4-b158-5050df34bfbe_en?filename=EDF-2023-DA-SENS-GRID_EISNET.pdf" target="_blank" rel="noopener noreferrer">EISNET</a> (European Interactive Sensor-based dynamic defence NETwork) is a European Defence Fund R&D project led by Thales. During my time at STAM, I led the company's system engineering activities within the consortium, contributing to the preparation and review of both internal and formal project deliverables and requirements.
     </p>
     <p>
       The project aims to improve the resilience of modern Integrated Air and Missile Defence (IAMD) systems against emerging threats by developing a dynamic network of interconnected sensors. Current IAMD architectures are largely centralized: each fire-control center coordinates its local sensors and generates target tracks, which are then transmitted through tactical data links to higher command and control layers. This process introduces delays and inefficiencies that become critical when dealing with modern threats such as hypersonic missiles, boost-glide vehicles, or large swarms of drones.

@@ -1,0 +1,192 @@
+/*******************************************************************************
+ * Simulation styles
+ ******************************************************************************/
+.simulation-container {
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Tabs                                                                       */
+/* -------------------------------------------------------------------------- */
+
+.simulation-tabs {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.simulation-tabs .tab {
+  flex: 0 0 auto;
+  min-width: 150px;
+  margin: 0;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--global-divider-color);
+  border-bottom: none;
+  border-radius: 0.3rem 0.3rem 0 0;
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color-light);
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.simulation-tabs .tab:hover {
+  color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+}
+
+.simulation-tabs .tab.active {
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  border: 2px solid var(--global-theme-color);
+  border-bottom: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Main simulation area                                                       */
+/* -------------------------------------------------------------------------- */
+
+.simulation-main {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.3rem;
+  background-color: var(--global-card-bg-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Canvas                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.simulation-canvas {
+  flex: 7 1 0;
+  min-width: 0;
+  min-height: 0;
+  background-color: #111;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Right-hand panel                                                           */
+/* -------------------------------------------------------------------------- */
+
+.simulation-side {
+  display: flex;
+  flex: 3 1 0;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.simulation-plots,
+.simulation-parameters {
+  min-width: 0;
+  min-height: 0;
+  padding: 0.75rem;
+  background-color: var(--global-card-bg-color);
+}
+
+.simulation-plots {
+  flex: 1 1 0;
+}
+
+.simulation-parameters {
+  flex: 1 1 0;
+  overflow-y: auto;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.simulation-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* Simulation controls                                                        */
+/* -------------------------------------------------------------------------- */
+
+.simulation-slider-wrapper {
+  margin-bottom: 1rem;
+}
+
+.simulation-slider-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+}
+
+.simulation-slider {
+  display: block;
+  width: 100%;
+  margin: 0;
+  accent-color: var(--global-theme-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Label                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.simulation-canvas {
+  position: relative;
+}
+
+.simulation-canvas-label {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.simulation-canvas-label,
+.simulation-canvas-label .simulation-value {
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive layout                                                          */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .simulation-main {
+    aspect-ratio: auto;
+    flex-direction: column;
+  }
+
+  .simulation-canvas {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .simulation-plots,
+  .simulation-parameters {
+    flex: none;
+    width: 100%;
+  }
+
+  .simulation-plots,
+  .simulation-parameters {
+    min-height: 250px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Bottom simulation text                                                     */
+/* -------------------------------------------------------------------------- */
+
+.simulation-text {
+  margin-top: 1.5rem;
+  text-align: justify;
+}

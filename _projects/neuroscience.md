@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Response in whole-brain models
 description:
 img: assets/img/projects/neuroscience/cover.jpg
@@ -15,7 +15,7 @@ related_publications: true
 <div class="row justify-content-sm-center">
   <div class="col-md-8 mt-3 mt-md-0" style="text-align: justify">
     <p>
-      However, the classical equilibrium FDT is limited in scope, as many biological systems, including the brain, are inherently out of equilibrium. To address this, more general formulations of the FDT have been developed, which do not require thermal equilibrium but still connect response functions to the underlying stochastic dynamics for linear perturbations around stable fixed points. These generalized fluctuation-dissipation relations extend the theoretical framework to encompass a broader class of systems described by coupled Langevin equations with Gaussian multivariate distributions at stationarity. While these generalized theorems are less powerful, meaning that the correlator functions cannot be fully reconstructed from response alone, they are considerably more robust and applicable to realistic models of neuronal activity.
+      However, this equilibrium FDT is limited in scope, as many biological systems, including the brain, are inherently out of equilibrium. To address this, more general formulations of the FDT have been developed, which do not require thermal equilibrium but still connect response functions to the underlying stochastic dynamics for linear perturbations around stable fixed points. These generalized fluctuation-dissipation relations extend the theoretical framework to encompass a broader class of systems described by coupled Langevin equations with Gaussian multivariate distributions at stationarity. While these generalized theorems are less powerful, meaning that the correlator functions cannot be fully reconstructed from response alone, they are considerably more robust and applicable to realistic models of neuronal activity.
     </p>
     <p>
       In practical terms, this generalized FDT framework enables researchers to infer the response properties of a system purely from observational data, without requiring detailed knowledge of the microscopic model. For whole-brain dynamics, this means that one can analyze the spontaneous activity correlations across different brain regions to predict how these regions will respond to small external stimuli. Such predictions are invaluable for identifying brain areas that are more sensitive or susceptible to perturbations, and for characterizing the functional form of these responses.

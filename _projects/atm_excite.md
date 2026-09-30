@@ -13,7 +13,7 @@ related_publications: false
 </p>
 
 <p style="text-align: justify">
-  While working for STAM, I was the company technical lead for the project, developing <a href="https://github.com/LucaMartinoia/bluesky_SIMCOM" target="_blank" rel="noopener noreferrer">SIMCOM</a>, one of the key research solution. SIMCOM is a multi-agent simulation platform designed to evaluate cyber-attacks targeting the Automatic Dependent Surveillance–Broadcast (ADS-B) system. It provides a flexible and extensible environment for investigating ADS-B vulnerabilities and their impact on air traffic flow and control, supporting the wider goals of the ATM-EXCITE project.
+  While at STAM, I served as the company's technical lead for the project, developing <a href="https://github.com/LucaMartinoia/bluesky_SIMCOM" target="_blank" rel="noopener noreferrer">SIMCOM</a>, one of its key research tools. SIMCOM is a multi-agent simulation platform designed to evaluate cyber-attacks targeting the Automatic Dependent Surveillance–Broadcast (ADS-B) system. It provides a flexible and extensible environment for investigating ADS-B vulnerabilities and their impact on air traffic flow and control, supporting the wider goals of the ATM-EXCITE project.
 </p>
 
 <div class="row justify-content-sm-center align-items-center">
@@ -51,7 +51,7 @@ related_publications: false
 </div>
 
 <p style="text-align: justify">
-  For ATM-EXCITE, I developed SIMCOM as a simulation environment to study how cyber-attacks affect ADS-B–based air traffic surveillance. The simulator is built on top of BlueSky, an open-source, research-grade air traffic management platform, which I extend with dedicated modules for cybersecurity analysis. With this, users can model realistic cyber attack scenarios and observe their operational impact on air traffic management.
+  For ATM-EXCITE, I developed SIMCOM as a simulation environment to study how cyber-attacks affect ADS-B–based air traffic surveillance. The simulator starts off as a fork of BlueSky, an open-source, research-grade air traffic management platform, which I extend with dedicated modules for cybersecurity analysis. With this, users can model realistic cyber attack scenarios and observe their operational impact on air traffic management.
 </p>
 
 <p style="text-align: justify">

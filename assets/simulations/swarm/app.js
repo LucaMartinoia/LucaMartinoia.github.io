@@ -1,34 +1,21 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.126.0/build/three.module.js";
-console.log("THREE imported", THREE);
-
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.126.0/examples/jsm/loaders/GLTFLoader.js";
-console.log("GLTFLoader imported", GLTFLoader);
-
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.126.0/examples/jsm/controls/OrbitControls.js";
-console.log("OrbitControls imported", OrbitControls);
-
-console.log("Starting swarm.js");
 
 // ------------------------------------------
 // ------------- SCENE ----------------------
 // ------------------------------------------
 
 // Asset loader
-console.log("Creating GLTFLoader");
 const loader = new GLTFLoader();
-console.log("GLTFLoader created");
 
 // Attach to container
-console.log("Getting container");
 const container = document.getElementById("three-container");
-console.log("Container:", container);
 const width = container.clientWidth;
 const height = container.clientHeight;
 
 // Create scene
-console.log("Creating scene");
 const scene = new THREE.Scene();
-console.log("Scene created");
 scene.background = new THREE.Color(0xdddddd);
 
 // Renderer
