@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EISNET
-description:
+description: Improving IAMD resiliance to new threats
 img: assets/img/projects/eisnet/cover.jpeg
 importance: 1
 category: engineering

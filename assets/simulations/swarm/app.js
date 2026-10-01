@@ -1,487 +1,703 @@
+import { UI } from "../common/ui.js";
+import { Plotter } from "../common/plotter.js";
+
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.126.0/build/three.module.js";
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.126.0/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.126.0/examples/jsm/controls/OrbitControls.js";
 
-// ------------------------------------------
-// ------------- SCENE ----------------------
-// ------------------------------------------
-
-// Asset loader
-const loader = new GLTFLoader();
-
-// Attach to container
-const container = document.getElementById("three-container");
-const width = container.clientWidth;
-const height = container.clientHeight;
-
-// Create scene
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xdddddd);
-
+// ----------------------
 // Renderer
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(width, height);
-container.appendChild(renderer.domElement);
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.outputEncoding = THREE.sRGBEncoding;
+// ----------------------
+class DroneRenderer {
+  constructor() {
+    this.container = document.getElementById("simulation-canvas");
 
-// Create and position the camera
-const camera = new THREE.PerspectiveCamera(
-  60, // vertical FOV in degrees
-  width / height, // aspect ratio
-  0.1, // near clipping plane
-  1000 // far clipping plane
-);
-camera.position.set(0, 35, 0);
-
-// Camera control with mouse
-const controls = new OrbitControls(camera, renderer.domElement);
-
-// Resize handling
-window.addEventListener("resize", () => {
-  const width_new = container.clientWidth;
-  const height_new = container.clientHeight;
-
-  camera.aspect = width_new / height_new;
-  camera.updateProjectionMatrix();
-  renderer.setSize(width_new, height_new);
-});
-
-// Lights
-const light = new THREE.DirectionalLight(0xffffff, 0.5);
-light.position.set(20, 50, 20);
-light.target.position.set(0, 0, 0);
-scene.add(light);
-scene.add(light.target);
-scene.add(new THREE.HemisphereLight(0xffffff, 0x888888, 0.15));
-
-// Shadow settings
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFShadowMap;
-light.castShadow = true;
-light.shadow.mapSize.width = 2048;
-light.shadow.mapSize.height = 2048;
-
-const d = 50;
-light.shadow.camera.left = -d;
-light.shadow.camera.right = d;
-light.shadow.camera.top = d;
-light.shadow.camera.bottom = -d;
-light.shadow.camera.near = 0.5;
-light.shadow.camera.far = 200;
-light.shadow.camera.updateProjectionMatrix();
-
-// Skydome
-const textureLoader = new THREE.TextureLoader();
-const skyTexture = textureLoader.load("/assets/simulations/swarm/assets/skydome.jpg");
-const skyGeometry = new THREE.SphereGeometry(500, 64, 32);
-const skyMaterial = new THREE.MeshBasicMaterial({
-  map: skyTexture,
-  side: THREE.BackSide,
-});
-const skydome = new THREE.Mesh(skyGeometry, skyMaterial);
-scene.add(skydome);
-skydome.rotation.x = -Math.PI / 3;
-skydome.rotation.z = -Math.PI / 3;
-
-// Ground
-loader.load("/assets/simulations/swarm/assets/field.glb", (gltf) => {
-  const field = gltf.scene;
-  scene.add(field);
-  field.scale.set(1, 1, 1);
-  field.updateMatrixWorld(true);
-
-  const box = new THREE.Box3().setFromObject(field);
-  const center = box.getCenter(new THREE.Vector3());
-
-  // Move geometry relative to its own origin
-  field.position.sub(center);
-
-  // Now explicitly place it at world origin
-  field.position.set(field.position.x + 55, field.position.y, field.position.z + 90);
-
-  field.rotation.set(-0.53, 0, 0.37);
-
-  field.traverse((child) => {
-    if (child.isMesh) {
-      const oldMat = child.material;
-
-      child.material = new THREE.MeshStandardMaterial({
-        map: oldMat.map || null,
-        normalMap: oldMat.normalMap || null,
-        roughness: 0.9,
-        metalness: 0.0,
-      });
-
-      child.receiveShadow = true;
+    if (!this.container) {
+      throw new Error("Simulation canvas not found");
     }
-  });
-});
 
-// Ambient fog
-scene.fog = new THREE.Fog(0xdddddd, 1, 230);
-skyMaterial.fog = false;
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
 
-// ------------------------------------------
-// -------------  GUI  ----------------------
-// ------------------------------------------
+    // Scene
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0xdddddd);
 
-// Drone parameters
-let N;
-let drones;
-let distanceMatrix;
+    // WebGL renderer
+    this.renderer = new THREE.WebGLRenderer({ antialias: true });
+    this.renderer.setPixelRatio(window.devicePixelRatio);
+    this.renderer.setSize(width, height);
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.outputEncoding = THREE.sRGBEncoding;
 
-let vTarget;
-let vDrone;
+    this.container.appendChild(this.renderer.domElement);
 
-let baseVMax = 4.0; // base velocity [m/s]
+    // Camera
+    this.camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+    this.camera.position.set(0, 35, 0);
 
-// Two way ranging parameters
-let twrOffsets;
-let lastFiredCycle;
-let simTime = 0;
-let dtTWR = 0.5; // [s]
+    // Controls
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
-// global flag
-let swarmFlag = true;
+    // Lights
+    const light = new THREE.DirectionalLight(0xffffff, 0.5);
+    light.position.set(20, 50, 20);
+    light.target.position.set(0, 0, 0);
 
-// link checkbox
-const swarmToggle = document.getElementById("swarm-toggle");
-swarmToggle.addEventListener("change", () => {
-  swarmFlag = swarmToggle.checked;
-});
+    this.scene.add(light);
+    this.scene.add(light.target);
+    this.scene.add(new THREE.HemisphereLight(0xffffff, 0x888888, 0.15));
 
-let playFlag = true; // global play/pause flag
-const playpauseButton = document.getElementById("playpause-button");
-const icon = playpauseButton.querySelector("i");
+    // Shadows
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFShadowMap;
 
-// initialize
-playpauseButton.classList.remove("paused");
-icon.classList.add("fa-play");
-icon.classList.remove("fa-pause");
+    light.castShadow = true;
+    light.shadow.mapSize.width = 2048;
+    light.shadow.mapSize.height = 2048;
 
-playpauseButton.addEventListener("click", () => {
-  playFlag = !playFlag;
+    const d = 50;
+    light.shadow.camera.left = -d;
+    light.shadow.camera.right = d;
+    light.shadow.camera.top = d;
+    light.shadow.camera.bottom = -d;
+    light.shadow.camera.near = 0.5;
+    light.shadow.camera.far = 200;
+    light.shadow.camera.updateProjectionMatrix();
 
-  if (playFlag) {
-    // playing → show play
-    playpauseButton.classList.remove("paused");
-    icon.classList.add("fa-play");
-    icon.classList.remove("fa-pause");
-  } else {
-    // paused → show pause
-    playpauseButton.classList.add("paused");
-    icon.classList.add("fa-pause");
-    icon.classList.remove("fa-play");
-  }
-});
+    // Fog
+    this.scene.fog = new THREE.Fog(0xdddddd, 1, 230);
 
-const droneCountLabel = document.getElementById("drone-count");
-const btnPlus = document.getElementById("btn-plus");
-const btnMinus = document.getElementById("btn-minus");
-
-function updateDroneLabel() {
-  droneCountLabel.textContent = N;
-}
-
-btnPlus.addEventListener("click", () => {
-  if (N < 8) {
-    initSwarm(N + 1);
-    updateDroneLabel();
-  }
-});
-
-btnMinus.addEventListener("click", () => {
-  if (N > 3) {
-    initSwarm(N - 1);
-    updateDroneLabel();
-  }
-});
-
-const sliderTWR = document.getElementById("slider-twr");
-const twrLabel = document.getElementById("twr-value");
-
-const sliderVMax = document.getElementById("slider-vmax");
-const vmaxLabel = document.getElementById("vmax-value");
-
-sliderTWR.addEventListener("input", () => {
-  dtTWR = parseFloat(sliderTWR.value);
-  twrLabel.textContent = dtTWR.toFixed(2);
-
-  // recompute broadcast scheduling
-  twrOffsets = Array.from({ length: N }, (_, i) => (i / N) * dtTWR);
-});
-
-sliderVMax.addEventListener("input", () => {
-  baseVMax = parseFloat(sliderVMax.value);
-  vmaxLabel.textContent = baseVMax.toFixed(1);
-});
-
-// Global variable for bearing error in degrees
-let bearingErrorSlider = document.getElementById("bearing-error-slider");
-let bearingErrorValue = document.getElementById("bearing-error-value");
-
-// Update label on change
-bearingErrorSlider.addEventListener("input", () => {
-  bearingErrorValue.textContent = bearingErrorSlider.value;
-});
-
-// ------------------------------------------
-// ------------- LOGIC ----------------------
-// ------------------------------------------
-
-// Initialize N drones
-function initSwarm(newN) {
-  N = newN;
-
-  // remove old drones from scene
-  if (drones) {
-    drones.forEach((d) => scene.remove(d.mesh));
+    window.addEventListener("resize", () => this.resize());
   }
 
-  // create drones and formation geometry
-  const result = loadDrones(N, 16);
-  drones = result.drones;
-  distanceMatrix = result.distanceMatrix;
+  resize() {
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
 
-  // velocity buffers
-  vTarget = Array.from({ length: N }, () => new THREE.Vector3());
-  vDrone = Array.from({ length: N }, () => new THREE.Vector3());
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
 
-  // TWR scheduling
-  twrOffsets = Array.from({ length: N }, (_, i) => (i / N) * dtTWR);
-  lastFiredCycle = Array(N).fill(-1);
-}
+    this.renderer.setSize(width, height);
+  }
 
-// Load drones
-function loadDrones(n_drones, height = 16) {
-  const drones = [];
-  const positions = computeDronePositions(n_drones);
-  const distanceMatrix = computeDroneMatrix(positions);
+  updateControls() {
+    this.controls.update();
+  }
 
-  loader.load("/assets/simulations/swarm/assets/parrot_camo_drone.glb", (gltf) => {
-    const baseDrone = gltf.scene;
-    baseDrone.scale.set(0.06, 0.06, 0.06);
-    baseDrone.rotation.z = Math.PI;
+  render() {
+    this.renderer.render(this.scene, this.camera);
+  }
 
-    for (let i = 0; i < n_drones; i++) {
-      const drone = baseDrone.clone(true);
+  setDrones(drones) {
+    this.drones = drones;
+  }
 
-      // set shadows
-      drone.traverse((child) => {
-        if (child.isMesh) child.castShadow = true;
+  syncDrones(logic, dt) {
+    logic.drones.forEach((drone, i) => {
+      const mesh = this.drones[i].mesh;
+
+      mesh.position.copy(drone.position);
+
+      this.drones[i].rotors.forEach((rotor) => {
+        rotor.rotation.y += 30 * dt;
       });
-
-      // position drone
-      const p = positions[i];
-      drone.position.set(p.x, height, p.z);
-
-      // find rotor groups
-      const rotors = [];
-      drone.traverse((child) => {
-        if (child.isObject3D && child.name.toLowerCase().includes("motor_props")) {
-          rotors.push(child);
-        }
-      });
-
-      scene.add(drone);
-      drones.push({
-        mesh: drone,
-        rotors,
-        velocity: new THREE.Vector3(0, 0, 0),
-      });
-    }
-  });
-
-  return { drones, distanceMatrix };
-}
-
-// Drone positions
-function computeDronePositions(n_drones) {
-  if (n_drones < 3 || n_drones > 8) {
-    throw new Error("Number of drones must be between 3 and 8");
-  }
-
-  const positions = [];
-
-  if (n_drones === 3) {
-    // equilateral triangle, side = 5
-    const a = 5;
-    positions.push({ x: 0, z: 0 }); // first drone at origin
-    positions.push({ x: a, z: 0 });
-    positions.push({ x: a / 2, z: (Math.sqrt(3) / 2) * a });
-  } else {
-    // one in center, rest evenly spaced on circle
-    const n_circle = n_drones - 1;
-    const radius = 5 / (2 * Math.sin(Math.PI / n_circle));
-
-    // center
-    positions.push({ x: 0, z: 0 });
-
-    // circle
-    for (let i = 0; i < n_circle; i++) {
-      const angle = (i / n_circle) * 2 * Math.PI;
-      positions.push({
-        x: radius * Math.cos(angle),
-        z: radius * Math.sin(angle),
-      });
-    }
-  }
-
-  return positions;
-}
-
-// Compute the distance matrix given drone positions
-function computeDroneMatrix(positions) {
-  const n = positions.length;
-  const matrix = Array.from({ length: n }, () => Array(n).fill(0));
-
-  for (let i = 0; i < n; i++) {
-    for (let j = i + 1; j < n; j++) {
-      const dx = positions[i].x - positions[j].x;
-      const dz = positions[i].z - positions[j].z;
-      const dist = Math.sqrt(dx * dx + dz * dz);
-
-      matrix[i][j] = dist;
-      matrix[j][i] = dist; // symmetric
-    }
-  }
-
-  return matrix;
-}
-
-// Update drone position - base case
-function updateDrones(dt) {
-  const baseTau = 0.15; // base memory [s]
-
-  drones.forEach((d) => {
-    // slightly jitter per-drone parameters
-    const tau = baseTau * (0.7 + 0.6 * Math.random()); // ±30% variation
-    const vMax = baseVMax * (0.7 + 0.6 * Math.random());
-
-    // random target velocity
-    const angle = Math.random() * 2 * Math.PI;
-    const speed = (Math.random() * 2 - 1) * vMax;
-
-    const vRand = new THREE.Vector3(Math.cos(angle) * speed, 0, Math.sin(angle) * speed);
-
-    // velocity relaxation
-    d.velocity.addScaledVector(vRand.sub(d.velocity), dt / tau);
-
-    // integrate position
-    d.mesh.position.addScaledVector(d.velocity, dt);
-
-    // spin rotors
-    d.rotors.forEach((r) => {
-      r.rotation.y += 30 * dt;
     });
-  });
+  }
 }
 
-// Update swarm position according to timers
-function updateSwarm(simTime, dt) {
-  const tau = 0.2; // relaxation time [s]
+// ----------------------
+// Assets loader
+// ----------------------
+class DroneAssets {
+  constructor(scene) {
+    this.scene = scene;
 
-  const tModulo = simTime % dtTWR;
-  const currentCycle = Math.floor(simTime / dtTWR);
+    this.loader = new GLTFLoader();
+    this.textureLoader = new THREE.TextureLoader();
 
-  // Check if each drone is due to broadcast
-  drones.forEach((d, i) => {
-    if (tModulo >= twrOffsets[i] && lastFiredCycle[i] < currentCycle) {
-      swarmDynamics(i);
-      lastFiredCycle[i] = currentCycle;
-    }
-
-    // velocity relaxation
-    vDrone[i].addScaledVector(vTarget[i].clone().sub(vDrone[i]), dt / tau);
-    // damp velocity
-    vDrone[i].multiplyScalar(0.9);
-    // integrate position
-    d.mesh.position.addScaledVector(vDrone[i], dt);
-  });
-}
-
-// Two-way ranging broadcast. Return current distances and bearings vectors.
-function TWRbroadcast(index) {
-  const d0 = drones[index].mesh.position;
-  const distances = new Array(N);
-  const bearings = new Array(N);
-
-  for (let j = 0; j < N; j++) {
-    if (j === index) {
-      distances[j] = 0;
-      bearings[j] = 0;
-      continue;
-    }
-
-    const dj = drones[j].mesh.position;
-    const dx = dj.x - d0.x;
-    const dz = dj.z - d0.z;
-
-    const r = Math.sqrt(dx * dx + dz * dz); // 2D distance in XZ plane
-    distances[j] = r;
-
-    let theta = Math.atan2(dz, dx);
-
-    // Inject bearing error based on slider
-    const errorDeg = parseFloat(bearingErrorSlider.value);
-    const errorRad = THREE.MathUtils.degToRad(errorDeg);
-    theta += (Math.random() * 2 - 1) * errorRad; // ±error uniformly
-
-    bearings[j] = theta;
+    this.drones = [];
+    this.droneLoadId = 0;
   }
 
-  return { distances, bearings };
-}
-
-// Swarm update logic
-function swarmDynamics(i) {
-  const { distances, bearings } = TWRbroadcast(i);
-
-  const force = new THREE.Vector3();
-
-  for (let j = 0; j < N; j++) {
-    if (j === i) continue;
-
-    const r = distances[j];
-    const d = distanceMatrix[i][j];
-    const theta = bearings[j];
-
-    const error = r - d;
-
-    // spring-like force
-    force.x += error * Math.cos(theta);
-    force.z += error * Math.sin(theta);
+  loadEnvironment() {
+    this.loadSky();
+    this.loadField();
   }
 
-  const K = 0.3;
+  loadSky() {
+    const skyTexture = this.textureLoader.load("/assets/simulations/swarm/assets/skydome.jpg");
 
-  vTarget[i].x = K * force.x;
-  vTarget[i].z = K * force.z;
+    const skyGeometry = new THREE.SphereGeometry(500, 64, 32);
+
+    const skyMaterial = new THREE.MeshBasicMaterial({
+      map: skyTexture,
+      side: THREE.BackSide,
+    });
+
+    const skydome = new THREE.Mesh(skyGeometry, skyMaterial);
+
+    skydome.rotation.x = -Math.PI / 3;
+    skydome.rotation.z = -Math.PI / 3;
+
+    this.scene.add(skydome);
+
+    // MeshBasicMaterial does not need scene fog.
+    skyMaterial.fog = false;
+  }
+
+  loadField() {
+    this.loader.load("/assets/simulations/swarm/assets/field.glb", (gltf) => {
+      const field = gltf.scene;
+
+      field.scale.set(1, 1, 1);
+      field.updateMatrixWorld(true);
+
+      const box = new THREE.Box3().setFromObject(field);
+      const center = box.getCenter(new THREE.Vector3());
+
+      field.position.sub(center);
+      field.position.set(field.position.x + 55, field.position.y, field.position.z + 90);
+
+      field.rotation.set(-0.53, 0, 0.37);
+
+      field.traverse((child) => {
+        if (!child.isMesh) return;
+
+        const oldMat = child.material;
+
+        child.material = new THREE.MeshStandardMaterial({
+          map: oldMat.map || null,
+          normalMap: oldMat.normalMap || null,
+          roughness: 0.9,
+          metalness: 0.0,
+        });
+
+        child.receiveShadow = true;
+      });
+
+      this.scene.add(field);
+    });
+  }
+
+  loadDrones(n, positions, height = 16, onLoad) {
+    const loadId = ++this.droneLoadId;
+
+    this.loader.load("/assets/simulations/swarm/assets/parrot_camo_drone.glb", (gltf) => {
+      if (loadId !== this.droneLoadId) {
+        return;
+      }
+
+      const baseDrone = gltf.scene;
+      baseDrone.scale.set(0.06, 0.06, 0.06);
+      baseDrone.rotation.z = Math.PI;
+
+      const drones = [];
+
+      for (let i = 0; i < n; i++) {
+        const drone = baseDrone.clone(true);
+
+        drone.traverse((child) => {
+          if (child.isMesh) {
+            child.castShadow = true;
+          }
+        });
+
+        const position = positions[i];
+
+        drone.position.set(position.x, height, position.z);
+
+        const rotors = [];
+
+        drone.traverse((child) => {
+          if (child.isObject3D && child.name.toLowerCase().includes("motor_props")) {
+            rotors.push(child);
+          }
+        });
+
+        this.scene.add(drone);
+
+        drones.push({
+          mesh: drone,
+          rotors,
+        });
+      }
+
+      this.drones = drones;
+      onLoad(drones);
+    });
+  }
+
+  clearDrones() {
+    if (!this.drones) return;
+
+    this.droneLoadId++;
+
+    this.drones.forEach(({ mesh }) => {
+      this.scene.remove(mesh);
+    });
+
+    this.drones = [];
+  }
 }
 
-initSwarm(4);
-updateDroneLabel();
+// ----------------------
+// Simulation logic
+// ----------------------
+class DroneLogic {
+  constructor() {
+    this.N = 0;
+    this.drones = [];
 
-// MAIN UPDATE LOOP
+    this.distanceMatrix = [];
+    this.controlVelocity = [];
+
+    this.maxDriftVelocity = 1.0;
+    this.driftNoise = 0.3;
+    this.tau = 0.1;
+
+    this.twrOffsets = [];
+    this.lastFiredCycle = [];
+    this.simTime = 0;
+    this.dtTWR = 0.5;
+
+    this.bearingError = 0;
+
+    this.swarmFlag = true;
+  }
+
+  initialize(n) {
+    this.N = n;
+
+    const positions = this.computeDronePositions(n);
+
+    this.distanceMatrix = this.computeDroneMatrix(positions);
+
+    this.controlVelocity = Array.from({ length: n }, () => new THREE.Vector3());
+
+    this.twrOffsets = Array.from({ length: n }, (_, i) => (i / n) * this.dtTWR);
+
+    this.lastFiredCycle = Array(n).fill(-1);
+    this.simTime = 0;
+
+    this.drones = positions.map((position) => {
+      const angle = Math.random() * 2 * Math.PI;
+      const speed = Math.random() * this.maxDriftVelocity;
+
+      const driftVelocity = new THREE.Vector3(Math.cos(angle) * speed, 0, Math.sin(angle) * speed);
+
+      return {
+        position: new THREE.Vector3(position.x, 16, position.z),
+        velocity: driftVelocity.clone(),
+        driftVelocity,
+      };
+    });
+
+    if (this.swarmFlag) {
+      for (let i = 0; i < n; i++) {
+        this.swarmDynamics(i);
+      }
+    }
+
+    return positions;
+  }
+
+  update(dt) {
+    this.simTime += dt;
+
+    const tModulo = this.simTime % this.dtTWR;
+    const currentCycle = Math.floor(this.simTime / this.dtTWR);
+
+    this.drones.forEach((drone, i) => {
+      // Natural drift + stochastic disturbance
+      const noiseAngle = Math.random() * 2 * Math.PI;
+      const noiseSpeed = Math.random() * this.driftNoise;
+
+      const noiseVelocity = new THREE.Vector3(Math.cos(noiseAngle) * noiseSpeed, 0, Math.sin(noiseAngle) * noiseSpeed);
+
+      const targetVelocity = drone.driftVelocity.clone().add(noiseVelocity);
+
+      // Optional formation-control contribution
+      if (this.swarmFlag && tModulo >= this.twrOffsets[i] && this.lastFiredCycle[i] < currentCycle) {
+        this.swarmDynamics(i);
+        this.lastFiredCycle[i] = currentCycle;
+      }
+
+      if (this.swarmFlag) {
+        targetVelocity.add(this.controlVelocity[i]);
+      }
+
+      // OU relaxation
+      drone.velocity.addScaledVector(targetVelocity.sub(drone.velocity), dt / this.tau);
+
+      // Position integration
+      drone.position.addScaledVector(drone.velocity, dt);
+    });
+  }
+
+  swarmDynamics(i) {
+    const { distances, bearings } = this.twrBroadcast(i);
+
+    const force = new THREE.Vector3();
+
+    for (let j = 0; j < this.N; j++) {
+      if (j === i) continue;
+
+      const error = distances[j] - this.distanceMatrix[i][j];
+
+      const theta = bearings[j];
+
+      force.x += error * Math.cos(theta);
+      force.z += error * Math.sin(theta);
+    }
+
+    const K = 0.3;
+
+    this.controlVelocity[i].x = K * force.x;
+    this.controlVelocity[i].z = K * force.z;
+  }
+
+  twrBroadcast(index) {
+    const origin = this.drones[index].position;
+
+    const distances = new Array(this.N);
+    const bearings = new Array(this.N);
+
+    for (let j = 0; j < this.N; j++) {
+      if (j === index) {
+        distances[j] = 0;
+        bearings[j] = 0;
+        continue;
+      }
+
+      const other = this.drones[j].position;
+
+      const dx = other.x - origin.x;
+      const dz = other.z - origin.z;
+
+      const distance = Math.sqrt(dx * dx + dz * dz);
+      let bearing = Math.atan2(dz, dx);
+
+      bearing += (Math.random() * 2 - 1) * THREE.MathUtils.degToRad(this.bearingError);
+
+      distances[j] = distance;
+      bearings[j] = bearing;
+    }
+
+    return { distances, bearings };
+  }
+
+  computeDronePositions(n) {
+    if (n < 3 || n > 8) {
+      throw new Error("Number of drones must be between 3 and 8");
+    }
+
+    const positions = [];
+
+    if (n === 3) {
+      const a = 5;
+
+      positions.push({ x: 0, z: 0 });
+      positions.push({ x: a, z: 0 });
+      positions.push({
+        x: a / 2,
+        z: (Math.sqrt(3) / 2) * a,
+      });
+    } else {
+      const nCircle = n - 1;
+      const radius = 5 / (2 * Math.sin(Math.PI / nCircle));
+
+      positions.push({ x: 0, z: 0 });
+
+      for (let i = 0; i < nCircle; i++) {
+        const angle = (i / nCircle) * 2 * Math.PI;
+
+        positions.push({
+          x: radius * Math.cos(angle),
+          z: radius * Math.sin(angle),
+        });
+      }
+    }
+
+    return positions;
+  }
+
+  computeDroneMatrix(positions) {
+    const n = positions.length;
+    const matrix = Array.from({ length: n }, () => Array(n).fill(0));
+
+    for (let i = 0; i < n; i++) {
+      for (let j = i + 1; j < n; j++) {
+        const dx = positions[i].x - positions[j].x;
+        const dz = positions[i].z - positions[j].z;
+
+        const distance = Math.sqrt(dx * dx + dz * dz);
+
+        matrix[i][j] = distance;
+        matrix[j][i] = distance;
+      }
+    }
+
+    return matrix;
+  }
+}
+
+// ----------------------
+// Plotter
+// ----------------------
+class DronePlotter {
+  constructor(plotter) {
+    this.plotter = plotter;
+
+    this.timeHistory = [];
+    this.offsetHistory = [];
+
+    this.lastPlotTime = 0;
+    this.plotInterval = 100;
+
+    this.maxHistory = 2000;
+  }
+
+  render(model) {
+    if (performance.now() - this.lastPlotTime < this.plotInterval) {
+      return;
+    }
+
+    this.lastPlotTime = performance.now();
+
+    const offset = this.computeAverageOffset(model);
+
+    this.timeHistory.push(model.simTime);
+    this.offsetHistory.push(offset);
+
+    if (this.timeHistory.length > this.maxHistory) {
+      this.timeHistory.shift();
+      this.offsetHistory.shift();
+    }
+
+    this.plotter.draw(
+      [
+        {
+          x: [...this.timeHistory],
+          y: [...this.offsetHistory],
+          mode: "lines",
+          name: "Average distance offset",
+          line: {
+            width: 2,
+            color: "#1f77b4",
+          },
+        },
+      ],
+      {
+        height: this.plotter.height,
+        margin: this.plotter.margin,
+
+        annotations: [
+          {
+            text: "Avg distance error",
+            x: 0.5,
+            y: 1.2,
+            xref: "paper",
+            yref: "paper",
+            showarrow: false,
+            font: { size: 14 },
+          },
+        ],
+
+        xaxis: {
+          title: {
+            text: "time",
+            font: {
+              size: 16,
+            },
+          },
+          zeroline: false,
+          showgrid: true,
+        },
+
+        yaxis: {
+          title: {
+            text: "⟨ε⟩",
+            font: {
+              size: 16,
+            },
+          },
+          zeroline: true,
+          showgrid: true,
+        },
+
+        showlegend: false,
+      }
+    );
+  }
+
+  computeAverageOffset(model) {
+    const n = model.N;
+
+    if (n < 2) {
+      return 0;
+    }
+
+    let totalOffset = 0;
+    let pairCount = 0;
+
+    for (let i = 0; i < n; i++) {
+      for (let j = i + 1; j < n; j++) {
+        const droneI = model.drones[i].position;
+        const droneJ = model.drones[j].position;
+
+        const dx = droneI.x - droneJ.x;
+        const dz = droneI.z - droneJ.z;
+
+        const actualDistance = Math.sqrt(dx * dx + dz * dz);
+        const desiredDistance = model.distanceMatrix[i][j];
+
+        totalOffset += actualDistance - desiredDistance;
+        pairCount++;
+      }
+    }
+
+    return totalOffset / pairCount;
+  }
+
+  reset() {
+    this.timeHistory = [];
+    this.offsetHistory = [];
+    this.lastPlotTime = 0;
+  }
+}
+
+// ----------------------
+// UI
+// ----------------------
+class DroneUI {
+  constructor(ui, logic) {
+    this.ui = ui;
+    this.logic = logic;
+  }
+
+  render({ onSwarmChange, onDroneCountChange, onTWRChange, onVMaxChange, onBearingErrorChange }) {
+    const swarmToggle = this.ui.createCheckbox({
+      label: "Swarm logic",
+      checked: true,
+      onChange: onSwarmChange,
+    });
+
+    const droneCount = this.ui.createValueControl({
+      label: "Drones",
+      value: this.logic.N,
+      min: 3,
+      max: 8,
+      onChange: onDroneCountChange,
+    });
+
+    const twrSlider = this.ui.createSlider({
+      label: "TWR interval (s)",
+      min: 0.1,
+      max: 2,
+      step: 0.1,
+      value: this.logic.dtTWR,
+      onInput: onTWRChange,
+      format: (value) => value.toFixed(2),
+    });
+
+    const vmaxSlider = this.ui.createSlider({
+      label: "Maximum velocity (m/s)",
+      min: 0.1,
+      max: 3,
+      step: 0.1,
+      value: this.logic.maxDriftVelocity,
+      onInput: onVMaxChange,
+      format: (value) => value.toFixed(1),
+    });
+
+    const bearingErrorSlider = this.ui.createSlider({
+      label: "Bearing error (°)",
+      min: 0,
+      max: 20,
+      step: 1,
+      value: this.logic.bearingError,
+      onInput: onBearingErrorChange,
+    });
+
+    this.ui.appendControl(swarmToggle);
+    this.ui.appendControl(droneCount);
+    this.ui.appendControl(twrSlider);
+    this.ui.appendControl(vmaxSlider);
+    this.ui.appendControl(bearingErrorSlider);
+  }
+}
+
+// ----------------------
+// Entry point
+// ----------------------
+const renderer = new DroneRenderer();
+const assets = new DroneAssets(renderer.scene);
+const logic = new DroneLogic();
+const positions = logic.initialize(4);
+
+const ui = new DroneUI(new UI(), logic);
+const plotter = new DronePlotter(new Plotter());
+
+ui.render({
+  onSwarmChange: (enabled) => {
+    logic.swarmFlag = enabled;
+  },
+
+  onDroneCountChange: (count) => {
+    assets.clearDrones();
+    plotter.reset();
+
+    const positions = logic.initialize(count);
+
+    assets.loadDrones(count, positions, 16, (drones) => {
+      renderer.setDrones(drones);
+    });
+  },
+
+  onTWRChange: (value) => {
+    logic.dtTWR = value;
+    logic.twrOffsets = Array.from({ length: logic.N }, (_, i) => (i / logic.N) * logic.dtTWR);
+  },
+
+  onVMaxChange: (value) => {
+    assets.clearDrones();
+    plotter.reset();
+
+    logic.maxDriftVelocity = value;
+    const positions = logic.initialize(logic.N);
+
+    assets.loadDrones(logic.N, positions, 16, (drones) => {
+      renderer.setDrones(drones);
+    });
+  },
+
+  onBearingErrorChange: (value) => {
+    logic.bearingError = value;
+  },
+});
+
+assets.loadEnvironment();
+assets.loadDrones(logic.N, positions, 16, (drones) => {
+  renderer.setDrones(drones);
+  animate();
+});
+
 const clock = new THREE.Clock();
+
 function animate() {
-  requestAnimationFrame(animate); // always call next frame
+  requestAnimationFrame(animate);
 
   const dt = clock.getDelta();
+  const playFlag = true;
 
   if (playFlag) {
-    simTime += dt;
+    logic.update(dt);
 
-    // Base drone dynamics
-    updateDrones(dt);
-
-    // Swarm logic
-    if (swarmFlag) updateSwarm(simTime, dt);
+    renderer.syncDrones(logic, dt);
+    plotter.render(logic);
   }
 
-  controls.update();
-  renderer.render(scene, camera);
+  renderer.updateControls();
+  renderer.render();
 }
-animate();

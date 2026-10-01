@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Flocking matter
-description:
+description: Scaling laws in active matter hydrodynamics
 img: assets/img/projects/flocking_matter/cover.jpg
 importance: 2
 category: physics

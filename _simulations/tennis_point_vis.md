@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tennis match visualizer
-description:
+description: Visual reconstruction of tennis matches from Match Charting Project
 category: simulations
 img: assets/simulations/tennis_viz/cover.jpg
 ---
@@ -12,7 +12,7 @@ img: assets/simulations/tennis_viz/cover.jpg
 
 <div class="row justify-content-sm-center">
     <div class="col-md-10 mt-2">
-        {% include figure.liquid path="assets/img/simulations/tennis_viz/tennis.jpg"
+        {% include figure.liquid path="assets/simulations/tennis_viz/tennis.jpg"
           title="Tennis Match Visualizer"
           class="img-fluid rounded z-depth-1"
         %}

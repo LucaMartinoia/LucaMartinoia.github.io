@@ -1,95 +1,34 @@
 ---
 layout: simulation
-title: Drone swarm dynamics
-description: TODO ALLTODO ALLTODO ALLTODO ALLTODO ALLTODO ALLTODO ALL
+title: Drone swarms
+description: Exploring decentralized swarm behaviour
 category: simulations
 img: assets/simulations/swarm/cover.jpg
 script: swarm/app.js
+chart:
+  plotly: true
 ---
 
-<div id="canvas-container" class="simulation-canvas">
-  <div id="three-container" class="simulation-canvas"></div>
+<p style="text-align: justify">
+  The idea for this simulation comes from the EDF <a href="https://defence-industry-space.ec.europa.eu/document/download/6abd0f72-808a-4c1d-8b2e-b271abdb1db7_en?filename=EDF-2023-LS-RA-SMERO-NT%20STEALTH.pdf">STEALTH</a> project, which aims to develop methods and tools for enabling UAV swarms to operate in GNSS-denied environments.
+</p>
 
-  <!-- Full-size transparent button -->
+<p style="text-align: justify">
+  Inspired by this problem, I wanted to explore whether a simple first-order control algorithm could help a distributed swarm maintain its formation without relying on a centralized authority. The simulation deliberately uses a simplified model, focusing on the interplay between natural drift, imperfect measurements, and asynchronous local control.
+</p>
 
-<button id="playpause-button"><i class="fa-solid fa-play"></i></button>
-</div>
+<p style="text-align: justify">
+  Each drone is assigned a preferred planar drift velocity, randomly chosen at the beginning of the simulation. This term represents persistent effects such as wind, mechanical imperfections, or errors in the control and sensing loop. At each time step, a further random perturbation is added to this drift velocity, representing smaller and more rapidly varying disturbances. The resulting target velocity is then used in a relaxational random-walk process, modelled as an Ornstein-Uhlenbeck process, to update the drone's actual velocity and position.
+</p>
 
-<!-- GUI -->
-<div
-  id="bottom-panel"
-  style="
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 20px auto;
-    gap: 20px;
-  "
->
-  <!-- Left: Swarm parameters -->
-  <div
-    id="swarm-panel"
-    style="
-      width: 320px;
-      background-color: transparent;
-      border: 2px solid var(--global-theme-color);
-      border-radius: 8px;
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px; /* spacing between top row and sliders */
-    "
-  >
-    <h3 style="margin-top: 0; text-align: center">Parameters</h3>
-    <!-- Top row: drones + toggle -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center; gap: 4px;">
-        <span>Drones:</span>
-        <span id="drone-count" style="min-width: 15px; text-align: center;">4</span>
-        <button id="btn-minus" class="symbol-btn"><i class="fa-solid fa-minus"></i></button>
-        <button id="btn-plus" class="symbol-btn"><i class="fa-slab fa-regular fa-plus"></i></button>
-      </div>
-      <div style="display: flex; align-items: center; gap: 4px;">
-        <input type="checkbox" id="swarm-toggle" checked />
-        <label for="swarm-toggle" style="margin:0;">Swarm logic</label>
-      </div>
-    </div>
-    <!-- Sliders -->
-    <div>
-      <label for="slider-twr">Ranging period (s):</label>
-      <span id="twr-value">0.5</span>
-      <input id="slider-twr" type="range" min="0.01" max="1" step="0.01" value="0.5" class="full-width slider" />
-    </div>
-    <div>
-      <label for="slider-vmax">Drone noise (m/s):</label>
-      <span id="vmax-value">4.0</span>
-      <input id="slider-vmax" type="range" min="0" max="10" step="0.1" value="4" class="full-width slider" />
-    </div>
-    <div>
-      <label for="bearing-error-slider">Bearing error (°):</label>
-      <span id="bearing-error-value">0</span>
-      <input id="bearing-error-slider" type="range" min="0" max="20" step="0.1" value="0" class="full-width slider" />
-    </div>
+<p style="text-align: justify">
+  With the swarm logic disabled, these independent disturbances naturally cause the formation to disperse. The default drift is intentionally relatively large to make this effect visible; in a real system, I expect the uncontrolled drones to remain in formation for longer.
+</p>
 
-  </div>
+<p style="text-align: justify">
+  When the swarm logic is enabled, each drone independently estimates the correction needed to maintain the formation. One possible engineering implementation would be to use ultra-wideband (UWB) two-way ranging to measure the distances to neighbouring drones, together with a small antenna array to estimate their approximate bearings. The measurements are performed asynchronously, so each drone updates its control command independently rather than relying on a centralized controller.
+</p>
 
-  <!-- Right: Explanation -->
-  <div id="explanation" style="flex: 1; padding: 2px; text-align: justify; margin-top: 0px">
-    <h3>Explanation</h3>
-    <p>
-      This simulation models a small aerial drone swarm in a GNSS-denied
-      environment. Each drone moves with a strong relaxational random-walk,
-      mimicking natural drift, and performs two-way ranging broadcasts in
-      the Ultra-Wide Band (UWB) frequency range to measure distances to its
-      neighbors. We assume that each reply occurs on a slightly different
-      frequency, so the sender can identify which drone responded.
-    </p>
-    <p>
-      We further assume the drones are equipped small antenna array to
-      estimate the bearing of nearby drones. Using only distance and bearing
-      measurements, the swarm maintains a prescribed geometric formation,
-      showing how coordinated behavior can emerge from simple decentralized
-      sensing and interactions.
-    </p>
-  </div>
-</div>
+<p style="text-align: justify">
+  The measured distances and bearings are compared with the desired formation geometry to determine a corrective velocity. This control contribution is added to the drone's natural drift and passed through the same relaxational dynamics as the uncontrolled motion. The resulting behaviour illustrates the limits of the simple distributed controller: maintaining the formation becomes increasingly difficult as the drift velocity or bearing error increases, while very small swarms provide fewer relative measurements and therefore less geometric redundancy.
+</p>

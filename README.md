@@ -250,10 +250,6 @@ This is a list of local changes performed compared to the pure al-folio version:
 - Further modified `_includes/head.liquid` in order to inject `assets/css/cv-custom.css` in the CV pages.
 - Added `assets/css/main.scss` to overwrite the same file from the al-folio-core plugin. `main.scss` acts as the entry point for all `_sass` files. Then, we can add as many stylesheets as we want inside `_sass`, such as `_sass/_social-icons.scss` and import these files at the bottom of `main.scss` via `@use "social-icons";`. With this approach, we added colors to the social icons.
 - Changed the light theme main color by copying `_sass/_themes.scss` from al-folio-core and modifying the accents and links colors inside it.
+- Created the `_layout/simulation.liquid` style for pages inside `_simulations` collection (remmeber to add the simulation to `_config.yaml`). Then I added a `_sass/_simulations.scss` with the CSS styling of the simulation classes and added this to `main.scss`. Finally, I added a bunch of javascript files (generic classes and factories) to `assets/simulations/common`.
 
 ## TODO:
-
-1. Refactor simulation_lab so that UI, Plotter and Explainer are in generic JS modules which can be imported inside swarm.js too, so they share the same infrastructure.
-2. Change Ising colors
-3. Add plot to the drone swarm sim
-4. Check everything carefully in the SIMULATION pages

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Response in whole-brain models
-description:
+title: Whole-brain dynamics
+description: Predicting stimulus responses in whole-brain models
 img: assets/img/projects/neuroscience/cover.jpg
 importance: 2
 category: physics

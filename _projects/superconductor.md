@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Thin film superconductor
-description:
+title: Superconductive Field Effect
+description: Electric-field effects in thin-film superconductors
 img: assets/img/projects/superconductor/cover.jpg
 importance: 2
 category: physics

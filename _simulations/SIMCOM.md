@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SIMCOM
-description:
+description: Cyberattacks on ADS-B protocol
 category: simulations
 img: assets/simulations/simcom/cover.jpeg
 ---
@@ -12,7 +12,7 @@ img: assets/simulations/simcom/cover.jpeg
 
 <div class="row justify-content-sm-center">
     <div class="col-md-10 mt-2">
-        {% include figure.liquid path="assets/img/simulations/simcom/simcom.jpg"
+        {% include figure.liquid path="assets/simulations/simcom/simcom.jpeg"
           title="SIMCOM"
           class="img-fluid rounded z-depth-1"
         %}

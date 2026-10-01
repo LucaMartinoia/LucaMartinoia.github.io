@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ATM-EXCITE
-description:
+description: Enhancing ATM cybersecurity
 img: assets/img/projects/atm_excite/cover.jpeg
 importance: 1
 category: engineering

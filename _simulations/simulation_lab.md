@@ -1,7 +1,7 @@
 ---
 layout: simulation
-title: Simulation Lab
-description: TODO ALL
+title: Statistical physics
+description: Classical statistical physics simulations
 category: simulations
 img: assets/simulations/simulation_lab/cover.jpg
 script: simulation_lab/app.js

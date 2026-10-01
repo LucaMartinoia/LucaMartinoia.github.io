@@ -109,7 +109,6 @@
   height: 100%;
 }
 
-
 /* -------------------------------------------------------------------------- */
 /* Simulation controls                                                        */
 /* -------------------------------------------------------------------------- */
@@ -131,6 +130,69 @@
   width: 100%;
   margin: 0;
   accent-color: var(--global-theme-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Checkbox                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.simulation-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.simulation-checkbox {
+  margin: 0;
+  accent-color: var(--global-theme-color);
+}
+
+.simulation-checkbox-label {
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Value control                                                              */
+/* -------------------------------------------------------------------------- */
+
+.simulation-value-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.simulation-value-label {
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+}
+
+.simulation-value {
+  color: var(--global-text-color);
+  font-size: 0.9rem;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.simulation-value-wrapper button {
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--global-text-color);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.simulation-value-wrapper button:hover {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
 }
 
 /* -------------------------------------------------------------------------- */

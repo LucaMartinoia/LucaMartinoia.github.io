@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <!-- inherits style -->
 {% if page._styles %}
   <style type="text/css">
@@ -41,19 +40,19 @@ layout: default
   {% endif %}
 
   <!-- markdown content -->
-  <article>
+  <article class="container">
     {{ content }}
   </article>
 
   <!-- load script -->
-{% if page.script %}
-  <script>
-    window.addEventListener("load", () => {
-      const script = document.createElement("script");
-      script.type = "module";
-      script.src = "{{ page.script | prepend: '/assets/simulations/' | relative_url }}";
-      document.body.appendChild(script);
-    });
-  </script>
-{% endif %}
+  {% if page.script %}
+    <script>
+      window.addEventListener('load', () => {
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = "{{ page.script | prepend: '/assets/simulations/' | relative_url }}";
+        document.body.appendChild(script);
+      });
+    </script>
+  {% endif %}
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quasi-hydrodynamics
-description:
+description: Understanding the interplay between hydrodynamics and relaxation
 img: assets/img/projects/quasihydrodynamics/cover.jpg
 importance: 1
 category: physics
