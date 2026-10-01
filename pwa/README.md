@@ -1,1 +1,0 @@
-For each PWA, just add a new folder here with all its content exactly as is from the Vite build.

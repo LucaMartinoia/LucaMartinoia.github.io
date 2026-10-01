@@ -1,0 +1,1 @@
+export class Explanation{constructor(){this.container=document.getElementById("simulation-text")}clear(){this.container.innerHTML=""}setContent(t){this.container.innerHTML=t,globalThis.MathJax?.typesetPromise?.([this.container])}}

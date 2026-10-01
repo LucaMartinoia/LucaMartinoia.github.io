@@ -1,0 +1,48 @@
+/*
+Customizations relative to the al-folio-cv gem
+*/
+
+/* 
+This prevents the date/location cells from rendering as boxed rows.
+The date/location table is wider than the default date column.
+
+Fixing its width keeps dates, locations and institution logos aligned
+consistently across CV entries, including long values such as "2026 - Present" and "Bruxelles, Belgium".
+
+Scoped to .date-column so other table-cv instances, such as the
+personal-information/basics table, are unaffected.
+*/
+.date-column table.table-cv {
+  background-color: transparent !important;
+  border: none !important;
+  border-collapse: collapse;
+  width: 105px !important;
+  min-width: 105px !important;
+  table-layout: fixed;
+}
+
+/*
+Remove cell borders
+*/
+table.table-cv td,
+table.table-cv th {
+  border: none !important;
+  padding: 1px;
+}
+
+/*
+Restore the horizontal separators between CV entries.
+Remove the bullet dot on the left of the date column.
+*/
+ul.card-text.list-group.list-group-flush > li.list-group-item {
+  list-style: none !important;
+  border-bottom: 1px solid var(--global-divider-color) !important;
+}
+
+/*
+Re-align the date/location column vertically with the corresponding position/company content.
+The gem/core default uses translateY(-5px).
+*/
+.date-column {
+  transform: translateX(-15px) translateY(5px) !important;
+}
