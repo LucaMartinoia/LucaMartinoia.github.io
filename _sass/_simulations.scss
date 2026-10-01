@@ -232,15 +232,31 @@
     aspect-ratio: 16 / 9;
   }
 
-  .simulation-plots,
-  .simulation-parameters {
-    flex: none;
-    width: 100%;
+  .simulation-side {
+    display: contents;
   }
 
   .simulation-plots,
   .simulation-parameters {
+    flex: none;
+    width: 100%;
     min-height: 250px;
+    box-sizing: border-box;
+  }
+
+  .simulation-parameters {
+    border-top: 1px solid var(--global-divider-color);
+    min-height: 180px;
+  }
+
+  .simulation-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .simulation-tabs .tab {
+    min-width: 0;
+    flex: 1 1 0;
   }
 }
 
